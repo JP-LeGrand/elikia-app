@@ -1,0 +1,11 @@
+<div [class.dark-theme]="themeService.isDark()">
+
+    <router-outlet />
+
+    <div [ngClass]="{'d-none': router.url === '/login' || router.url === '/register' || router.url === '/coming-soon'}">
+        <app-footer />
+    </div>
+
+    <app-theme-customizer />
+
+</div>

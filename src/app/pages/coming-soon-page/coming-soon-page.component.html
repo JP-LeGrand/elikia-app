@@ -1,0 +1,42 @@
+<div
+    class="coming-soon-area"
+    [class.dark-coming-soon-area]="themeService.isDark()"
+    style="background-image: url(images/coming-soon-bg.jpg);"
+>
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="coming-soon-content">
+                <div
+                    [class.d-none]="themeService.isDark()"
+                >
+                    <a routerLink="/" class="logo">
+                        <img src="images/black-logo.png" alt="image">
+                    </a>
+                </div>
+                <div
+                    class="d-none"
+                    [class.d-block]="themeService.isDark()"
+                >
+                    <a routerLink="/" class="logo">
+                        <img src="images/logo.png" alt="image">
+                    </a>
+                </div>
+                <h2>We are launching soon</h2>
+                <div id="timer" class="flex-wrap d-flex justify-content-center">
+                    <div id="days" class="align-items-center flex-column d-flex justify-content-center">{{ countdown.days }} <span>Days</span></div>
+                    <div id="hours" class="align-items-center flex-column d-flex justify-content-center">{{ countdown.hours }} <span>Hours</span></div>
+                    <div id="minutes" class="align-items-center flex-column d-flex justify-content-center">{{ countdown.minutes }} <span>Minutes</span></div>
+                    <div id="seconds" class="align-items-center flex-column d-flex justify-content-center">{{ countdown.seconds }} <span>Seconds</span></div>
+                </div>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" class="input-newsletter" placeholder="Enter your email" name="EMAIL">
+                        <span class="label-title"><i class='bx bx-envelope'></i></span>
+                    </div>
+                    <button type="submit" class="default-btn"><i class='bx bx-paper-plane icon-arrow before'></i><span class="label">Subscribe</span><i class="bx bx-paper-plane icon-arrow after"></i></button>
+                    <p>If you would like to be notified when our app is live, Please subscribe to our mailing list.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

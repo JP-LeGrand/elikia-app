@@ -1,0 +1,94 @@
+<app-header-style-two />
+
+<div
+    class="page-title-area"
+    style="background-image: url(images/page-title/page-title2.jpg);"
+>
+    <div class="container">
+        <div class="page-title-content">
+            <ul>
+                <li><a routerLink="/">Home</a></li>
+                <li>My Dashboard</li>
+                <li>Orders</li>
+            </ul>
+            <h2>My Dashboard</h2>
+        </div>
+    </div>
+</div>
+
+<div
+    class="my-dashboard-area ptb-100"
+    [class.dark-my-dashboard-area]="themeService.isDark()"
+>
+    <div class="container">
+        <div class="myDashboard-navigation">
+            <ul>
+                <li><a routerLink="/my-dashboard"><i class='bx bxs-dashboard'></i> Dashboard</a></li>
+                <li><a routerLink="/orders" class="active"><i class='bx bx-cart'></i> Orders</a></li>
+                <li><a routerLink="/downloads"><i class='bx bx-download'></i> Downloads</a></li>
+                <li><a routerLink="/edit-address"><i class='bx bx-home-alt'></i> Addresses</a></li>
+                <li><a routerLink="/edit-account"><i class='bx bx-edit'></i> Account Details</a></li>
+                <li><a routerLink="/"><i class='bx bx-log-out'></i> Logout</a></li>
+            </ul>
+        </div>
+        <div class="myDashboard-content">
+            <div class="orders-table table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Order</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Total</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#074145O5</td>
+                            <td>October 18, 2025</td>
+                            <td>Completed</td>
+                            <td>$49.00 for 1 item</td>
+                            <td><a routerLink="/single-course" class="view-button">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>#074145O6</td>
+                            <td>October 18, 2025</td>
+                            <td>On Hold</td>
+                            <td>$49.00 for 1 item</td>
+                            <td><a routerLink="/single-course" class="view-button">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>#074145O7</td>
+                            <td>October 18, 2025</td>
+                            <td>Completed</td>
+                            <td>$49.00 for 1 item</td>
+                            <td><a routerLink="/single-course" class="view-button">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>#074145O5</td>
+                            <td>October 18, 2025</td>
+                            <td>Completed</td>
+                            <td>$49.00 for 1 item</td>
+                            <td><a routerLink="/single-course" class="view-button">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>#074145O6</td>
+                            <td>October 18, 2025</td>
+                            <td>On Hold</td>
+                            <td>$49.00 for 1 item</td>
+                            <td><a routerLink="/single-course" class="view-button">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>#074145O7</td>
+                            <td>October 18, 2025</td>
+                            <td>Completed</td>
+                            <td>$49.00 for 1 item</td>
+                            <td><a routerLink="/single-course" class="view-button">View</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+.dark-faq-area {
+    .faq-item {
+        strong {
+            color: var(--whiteColor);
+        }
+    }
+}
+.faq-item {
+    margin-bottom: 25px;
+
+    h3 {
+        margin-bottom: 13px;
+        line-height: 1.4;
+        font: {
+            size: 18px;
+            weight: 600;
+        };
+    }
+    strong {
+        color: var(--blackColor);
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .faq-item {
+        h3 {
+            font-size: 15px;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Min width 1200px to Max width 1275px */
+@media only screen and (min-width: 1200px) and (max-width: 1275px) {}

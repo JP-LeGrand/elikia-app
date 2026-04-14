@@ -1,0 +1,9 @@
+@if (isShow) {
+    <div
+        class="back-to-top"
+        (click)="scrollToTop()"
+        [class.dark-back-to-top]="themeService.isDark()"
+    >
+        <i class='bx bx-chevron-up'></i>
+    </div>
+}
