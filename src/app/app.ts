@@ -13,7 +13,7 @@ import { ThemeCustomizerComponent } from './common/theme-customizer/theme-custom
 })
 export class App {
 
-    protected readonly title = signal('Ednuv - Angular 20 Education LMS & Online Courses Template');
+    protected readonly title = signal('Elikia French4All');
 
     private previousUrl: string | null = null;
 
