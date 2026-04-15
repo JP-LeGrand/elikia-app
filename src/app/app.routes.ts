@@ -63,8 +63,8 @@ import { CheckoutPageComponent } from './pages/checkout-page/checkout-page.compo
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 export const routes: Routes = [
-    {path: '', component: OnlineEducationPortalComponent},
-    {path: 'course-portal-online', component: CoursePortalOnlineComponent},
+    {path: 'online-education-portal', component: OnlineEducationPortalComponent},
+    {path:'', component: CoursePortalOnlineComponent},
     {path: 'distant-learning', component: DistantLearningComponent},
     {path: 'modern-teaching', component: ModernTeachingComponent},
     {path: 'online-schooling', component: OnlineSchoolingComponent},
