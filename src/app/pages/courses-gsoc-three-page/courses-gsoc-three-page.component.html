@@ -20,428 +20,75 @@
     [class.dark-courses-area]="themeService.isDark()"
 >
     <div class="container">
-        <div class="courses-topbar">
-            <div class="row align-items-center">
-                <div class="col-lg-4 col-md-4">
-                    <div class="topbar-result-count">
-                        <p>Showing 1 – 9 of 9</p>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-8">
-                    <div class="topbar-ordering-and-search">
-                        <div class="row align-items-center">
-                            <div class="col-lg-3 col-md-5 offset-lg-4 offset-md-1 col-sm-6">
-                                <div class="topbar-ordering">
-                                    <select class="form-select">
-                                        <option>Sort by popularity</option>
-                                        <option>Sort by latest</option>
-                                        <option>Default sorting</option>
-                                        <option>Sort by rating</option>
-                                        <option>Sort by new</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-5 col-md-6 col-sm-6">
-                                <div class="topbar-search">
-                                    <form>
-                                        <label><i class="bx bx-search"></i></label>
-                                        <input type="text" class="input-search" placeholder="Search here...">
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="section-title text-start">
+            <span class="sub-title">Discover Courses</span>
+            <h2>Our Popular Online Courses</h2>
+            <a routerLink="/courses-3-columns-style-1" class="default-btn"><i class='bx bx-show-alt icon-arrow before'></i><span class="label">All Courses</span><i class="bx bx-show-alt icon-arrow after"></i></a>
         </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="single-courses-box mb-25">
-                    <div class="courses-image">
-                        <a routerLink="/single-course" class="d-block"><img src="images/courses/courses1.jpg" alt="image"></a>
-                        <div class="courses-tag">
-                            <a routerLink="/courses-3-columns-style-1" class="d-block">Adults</a>
-                        </div>
-                    </div>
-                    <div class="courses-content">
-                        <div class="course-author d-flex align-items-center">
-                            <img src="images/user1.jpg" class="rounded-circle mr-2" alt="image">
-                            <span>Steven Smith</span>
-                        </div>
-                        <h3><a routerLink="/single-course" class="d-inline-block">Conversational French courses to build confidence and fluency</a></h3>
-                        <div class="courses-rating">
-                            <div class="review-stars-rated">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                            </div>
-                            <div class="rating-total">
-                                5.0 (1 rating)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="courses-box-footer">
-                        <ul>
-                            <li class="students-number">
-                                <i class='bx bx-user'></i> 10 students
-                            </li>
-                            <li class="courses-lesson">
-                                <i class='bx bx-book-open'></i> 6 lessons
-                            </li>
-                            <li class="courses-price">
-                                Free
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-courses-box mb-25">
-                    <div class="courses-image">
-                        <a routerLink="/single-course" class="d-block"><img src="images/courses/courses2.jpg" alt="image"></a>
-                        <div class="courses-tag">
-                            <a routerLink="/courses-3-columns-style-1" class="d-block">Children and Teenagers</a>
-                        </div>
-                    </div>
-                    <div class="courses-content">
-                        <div class="course-author d-flex align-items-center">
-                            <img src="images/user2.jpg" class="rounded-circle mr-2" alt="image">
-                            <span>Sarah Taylor</span>
-                        </div>
-                        <h3><a routerLink="/single-course" class="d-inline-block">Structured French lessons and preparation for exams/certifications (DELF, IB, GCSE, etc.)</a></h3>
-                        <div class="courses-rating">
-                            <div class="review-stars-rated">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star-half'></i>
-                            </div>
-                            <div class="rating-total">
-                                4.5 (2 rating)
+
+        <ul class="nav-tabset">
+            @for (tab of tabs; track tab.id) {
+                <li class="nav-tab" [class.active]="currentTab === tab.id">
+                    <span [class.active]="currentTab === tab.id" (click)="switchTab($event, tab.id)">
+                        {{ tab.label }} ({{ getTabCount(tab).toString().padStart(2, '0') }})
+                    </span>
+                </li>
+            }
+        </ul>
+
+        <div class="tabs-container">
+            <div class="pane">
+                <div class="row">
+                    @for (program of filteredPrograms; track program.title) {
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-courses-box mb-25">
+                                <div class="courses-image">
+                                    <a routerLink="/single-course" class="d-block"><img [src]="program.image" alt="image"></a>
+                                    <div class="courses-tag">
+                                        <a routerLink="/courses-3-columns-style-1" class="d-block">{{ program.category }}</a>
+                                    </div>
+                                </div>
+                                <div class="courses-content">
+                                    <div class="course-author d-flex align-items-center">
+                                        <img [src]="program.authorImage" class="rounded-circle mr-2" alt="image">
+                                        <span>{{ program.authorName }}</span>
+                                    </div>
+                                    <h3><a routerLink="/single-course" class="d-inline-block">{{ program.title }}</a></h3>
+                                    <div class="courses-rating">
+                                        <div class="review-stars-rated">
+                                            @for (star of getStarIcons(program.rating); track $index) {
+                                                <i
+                                                    class='bx'
+                                                    [class.bxs-star]="star === 'full'"
+                                                    [class.bxs-star-half]="star === 'half'"
+                                                    [class.bx-star]="star === 'empty'"
+                                                ></i>
+                                            }
+                                        </div>
+                                        <div class="rating-total">
+                                            {{ program.rating.toFixed(1) }} ({{ program.ratingCount }} rating)
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="courses-box-footer">
+                                    <ul>
+                                        <li class="students-number">
+                                            <i class='bx bx-user'></i> {{ program.students }} students
+                                        </li>
+                                        <li class="courses-lesson">
+                                            <i class='bx bx-book-open'></i> {{ program.lessons }} lessons
+                                        </li>
+                                        <li class="courses-price">
+                                            @if (program.oldPrice) {
+                                                <span>{{ program.oldPrice }}</span>
+                                            }
+                                            {{ program.price }}
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="courses-box-footer">
-                        <ul>
-                            <li class="students-number">
-                                <i class='bx bx-user'></i> 15 students
-                            </li>
-                            <li class="courses-lesson">
-                                <i class='bx bx-book-open'></i> 10 lessons
-                            </li>
-                            <li class="courses-price">
-                                $250
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-courses-box mb-25">
-                    <div class="courses-image">
-                        <a routerLink="/single-course" class="d-block"><img src="images/courses/courses3.jpg" alt="image"></a>
-                        <div class="courses-tag">
-                            <a routerLink="/courses-3-columns-style-1" class="d-block">Companies and Professionals</a>
-                        </div>
-                    </div>
-                    <div class="courses-content">
-                        <div class="course-author d-flex align-items-center">
-                            <img src="images/user3.jpg" class="rounded-circle mr-2" alt="image">
-                            <span>James Anderson</span>
-                        </div>
-                        <h3><a routerLink="/single-course" class="d-inline-block">Tailored French language training for businesses and professionals dealing with Francophone Africa</a></h3>
-                        <div class="courses-rating">
-                            <div class="review-stars-rated">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bx-star'></i>
-                            </div>
-                            <div class="rating-total">
-                                4.0 (1 rating)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="courses-box-footer">
-                        <ul>
-                            <li class="students-number">
-                                <i class='bx bx-user'></i> 5 students
-                            </li>
-                            <li class="courses-lesson">
-                                <i class='bx bx-book-open'></i> 5 lessons
-                            </li>
-                            <li class="courses-price">
-                                $150
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-courses-box mb-25">
-                    <div class="courses-image">
-                        <a routerLink="/single-course" class="d-block"><img src="images/courses/courses4.jpg" alt="image"></a>
-                        <div class="courses-tag">
-                            <a routerLink="/courses-3-columns-style-1" class="d-block">Children and Teenagers</a>
-                        </div>
-                    </div>
-                    <div class="courses-content">
-                        <div class="course-author d-flex align-items-center">
-                            <img src="images/user4.jpg" class="rounded-circle mr-2" alt="image">
-                            <span>Liam King</span>
-                        </div>
-                        <h3><a routerLink="/single-course" class="d-inline-block">French Fun Clubs to explore French through playful and interactive activities</a></h3>
-                        <div class="courses-rating">
-                            <div class="review-stars-rated">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                            </div>
-                            <div class="rating-total">
-                                5.0 (1 rating)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="courses-box-footer">
-                        <ul>
-                            <li class="students-number">
-                                <i class='bx bx-user'></i> 10 students
-                            </li>
-                            <li class="courses-lesson">
-                                <i class='bx bx-book-open'></i> 6 lessons
-                            </li>
-                            <li class="courses-price">
-                                <span>$200</span>
-                                $195
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-courses-box mb-25">
-                    <div class="courses-image">
-                        <a routerLink="/single-course" class="d-block"><img src="images/courses/courses5.jpg" alt="image"></a>
-                        <div class="courses-tag">
-                            <a routerLink="/courses-3-columns-style-1" class="d-block">Companies and Professionals</a>
-                        </div>
-                    </div>
-                    <div class="courses-content">
-                        <div class="course-author d-flex align-items-center">
-                            <img src="images/user5.jpg" class="rounded-circle mr-2" alt="image">
-                            <span>Lina D'Souza</span>
-                        </div>
-                        <h3><a routerLink="/single-course" class="d-inline-block">Courses designed to meet specific team or sector needs</a></h3>
-                        <div class="courses-rating">
-                            <div class="review-stars-rated">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                            </div>
-                            <div class="rating-total">
-                                5.0 (1 rating)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="courses-box-footer">
-                        <ul>
-                            <li class="students-number">
-                                <i class='bx bx-user'></i> 10 students
-                            </li>
-                            <li class="courses-lesson">
-                                <i class='bx bx-book-open'></i> 6 lessons
-                            </li>
-                            <li class="courses-price">
-                                $178
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-courses-box mb-25">
-                    <div class="courses-image">
-                        <a routerLink="/single-course" class="d-block"><img src="images/courses/courses6.jpg" alt="image"></a>
-                        <div class="courses-tag">
-                            <a routerLink="/courses-3-columns-style-1" class="d-block">Adults</a>
-                        </div>
-                    </div>
-                    <div class="courses-content">
-                        <div class="course-author d-flex align-items-center">
-                            <img src="images/user6.jpg" class="rounded-circle mr-2" alt="image">
-                            <span>David Warner</span>
-                        </div>
-                        <h3><a routerLink="/single-course" class="d-inline-block">Preparation for official certifications (DELF, TEF, TCF)</a></h3>
-                        <div class="courses-rating">
-                            <div class="review-stars-rated">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                            </div>
-                            <div class="rating-total">
-                                5.0 (1 rating)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="courses-box-footer">
-                        <ul>
-                            <li class="students-number">
-                                <i class='bx bx-user'></i> 10 students
-                            </li>
-                            <li class="courses-lesson">
-                                <i class='bx bx-book-open'></i> 6 lessons
-                            </li>
-                            <li class="courses-price">
-                                $500
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-courses-box mb-25">
-                    <div class="courses-image">
-                        <a routerLink="/single-course" class="d-block"><img src="images/courses/courses1.jpg" alt="image"></a>
-                        <div class="courses-tag">
-                            <a routerLink="/courses-3-columns-style-1" class="d-block">Children and Teenagers</a>
-                        </div>
-                    </div>
-                    <div class="courses-content">
-                        <div class="course-author d-flex align-items-center">
-                            <img src="images/user1.jpg" class="rounded-circle mr-2" alt="image">
-                            <span>Steven Smith</span>
-                        </div>
-                        <h3><a routerLink="/single-course" class="d-inline-block">Academic support from kindergarten to high school, for students enrolled in French schools or wanting to stay aligned with the French national curriculum</a></h3>
-                        <div class="courses-rating">
-                            <div class="review-stars-rated">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                            </div>
-                            <div class="rating-total">
-                                5.0 (1 rating)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="courses-box-footer">
-                        <ul>
-                            <li class="students-number">
-                                <i class='bx bx-user'></i> 10 students
-                            </li>
-                            <li class="courses-lesson">
-                                <i class='bx bx-book-open'></i> 6 lessons
-                            </li>
-                            <li class="courses-price">
-                                Free
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-courses-box mb-25">
-                    <div class="courses-image">
-                        <a routerLink="/single-course" class="d-block"><img src="images/courses/courses2.jpg" alt="image"></a>
-                        <div class="courses-tag">
-                            <a routerLink="/courses-3-columns-style-1" class="d-block">ELF / Certification Preparation</a>
-                        </div>
-                    </div>
-                    <div class="courses-content">
-                        <div class="course-author d-flex align-items-center">
-                            <img src="images/user2.jpg" class="rounded-circle mr-2" alt="image">
-                            <span>Sarah Taylor</span>
-                        </div>
-                        <h3><a routerLink="/single-course" class="d-inline-block">Comprehensive ELF and certification preparation pathway</a></h3>
-                        <div class="courses-rating">
-                            <div class="review-stars-rated">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star-half'></i>
-                            </div>
-                            <div class="rating-total">
-                                4.5 (2 rating)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="courses-box-footer">
-                        <ul>
-                            <li class="students-number">
-                                <i class='bx bx-user'></i> 15 students
-                            </li>
-                            <li class="courses-lesson">
-                                <i class='bx bx-book-open'></i> 10 lessons
-                            </li>
-                            <li class="courses-price">
-                                $250
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-courses-box mb-25">
-                    <div class="courses-image">
-                        <a routerLink="/single-course" class="d-block"><img src="images/courses/courses3.jpg" alt="image"></a>
-                        <div class="courses-tag">
-                            <a routerLink="/courses-3-columns-style-1" class="d-block">Companies and Professionals</a>
-                        </div>
-                    </div>
-                    <div class="courses-content">
-                        <div class="course-author d-flex align-items-center">
-                            <img src="images/user3.jpg" class="rounded-circle mr-2" alt="image">
-                            <span>James Anderson</span>
-                        </div>
-                        <h3><a routerLink="/single-course" class="d-inline-block">On-site training in Johannesburg and Pretoria or online</a></h3>
-                        <div class="courses-rating">
-                            <div class="review-stars-rated">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bx-star'></i>
-                            </div>
-                            <div class="rating-total">
-                                4.0 (1 rating)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="courses-box-footer">
-                        <ul>
-                            <li class="students-number">
-                                <i class='bx bx-user'></i> 5 students
-                            </li>
-                            <li class="courses-lesson">
-                                <i class='bx bx-book-open'></i> 5 lessons
-                            </li>
-                            <li class="courses-price">
-                                $150
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="pagination-area text-center">
-                    <span class="page-numbers current" aria-current="page">1</span>
-                    <a routerLink="/courses-3-columns-style-1" class="page-numbers">2</a>
-                    <a routerLink="/courses-3-columns-style-1" class="page-numbers">3</a>
-                    <a routerLink="/courses-3-columns-style-1" class="page-numbers">4</a>
-                    <a routerLink="/courses-3-columns-style-1" class="page-numbers">5</a>
-                    <a routerLink="/courses-3-columns-style-1" class="next page-numbers"><i class='bx bx-chevron-right'></i></a>
+                    }
                 </div>
             </div>
         </div>

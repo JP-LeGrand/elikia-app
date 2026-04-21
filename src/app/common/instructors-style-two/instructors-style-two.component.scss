@@ -2,7 +2,7 @@
     .single-instructor-member {
         background: var(--blackColor);
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    
+
         &::after {
             background: var(--blackColor);
         }
@@ -63,6 +63,11 @@
             display: block;
             color: var(--mainColor);
             font-weight: 500;
+            margin-bottom: 12px;
+        }
+        p {
+            margin-bottom: 0;
+            line-height: 1.8;
         }
         .social {
             padding-left: 0;
@@ -141,7 +146,7 @@
         }
         .member-image {
             img {
-                transform: translateY(-50px);
+                transform: translateY(-20px);
             }
         }
         .member-content {
@@ -159,7 +164,7 @@
 
 /* Max width 767px */
 @media only screen and (max-width: 767px) {
-    
+
     .single-instructor-member {
         .member-content {
             top: auto;
