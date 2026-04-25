@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy, afterNextRender } from '@angular/core';
 import { ThemeCustomizerService } from '../../common/theme-customizer/theme-customizer.service';
-import { HeaderStyleThreeComponent } from '../../common/header-style-three/header-style-three.component';
 import { RouterLink, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { HeaderStyleTwoComponent } from "../../common/header-style-two/header-style-two.component";
 
 type ProgramCategory =
     | 'Adults'
@@ -32,7 +32,7 @@ interface ProgramTab {
 
 @Component({
     selector: 'app-courses-gsoc-three-page',
-    imports: [HeaderStyleThreeComponent, RouterLink],
+    imports: [RouterLink, HeaderStyleTwoComponent],
     templateUrl: './courses-gsoc-three-page.component.html',
     styleUrl: './courses-gsoc-three-page.component.scss'
 })
@@ -85,7 +85,18 @@ export class CoursesGsocThreePageComponent implements OnInit, OnDestroy {
             id: 'tab5',
             label: 'DELF / Certification Preparation',
             category: 'DELF / Certification Preparation'
+        },
+        {
+            id: 'tab6',
+            label: 'Training Formats'
         }
+    ];
+
+    readonly trainingFormats: string[] = [
+        'In-person in Johannesburg and Pretoria',
+        'Online, from anywhere',
+        'Individual or group sessions',
+        'Programs for children, adults, and corporate teams'
     ];
 
     readonly programs: ProgramItem[] = [
@@ -209,6 +220,9 @@ export class CoursesGsocThreePageComponent implements OnInit, OnDestroy {
     }
 
     getTabCount(tab: ProgramTab): number {
+        if (tab.id === 'tab6') {
+            return this.trainingFormats.length;
+        }
         if (!tab.category) {
             return this.programs.length;
         }
