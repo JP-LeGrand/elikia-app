@@ -12,13 +12,24 @@ import { StudentsFeedbackFormComponent } from '../../common/students-feedback-fo
 import { BlogComponent } from '../../common/blog/blog.component';
 import { WebinarCountdownComponent } from '../../common/webinar-countdown/webinar-countdown.component';
 import { RouterLink } from '@angular/router';
-import { LanguageCategoryComponent } from "../../common/language-category/language-category.component";
-import { BecomeInstructorPartnerComponent } from "../../common/become-instructor-partner/become-instructor-partner.component";
+import { LanguageCategoryComponent } from '../../common/language-category/language-category.component';
+import { BecomeInstructorPartnerComponent } from '../../common/become-instructor-partner/become-instructor-partner.component';
+import { FeedbackStyleTwoComponent } from '../../common/feedback-style-two/feedback-style-two.component';
 
 @Component({
     selector: 'app-course-portal-online',
-    imports: [HeaderStyleTwoComponent, HometwoMainBannerComponent, HometwoAboutComponent, CategoriesStyleOneComponent, FunfactsComponent, HometwoCoursesComponent, OurMissionComponent, PartnerStyleOneComponent, InstructorsStyleTwoComponent, StudentsFeedbackFormComponent, BlogComponent, WebinarCountdownComponent, RouterLink, LanguageCategoryComponent, BecomeInstructorPartnerComponent],
+    imports: [
+    HeaderStyleTwoComponent,
+    HometwoMainBannerComponent,
+    HometwoAboutComponent,
+    FunfactsComponent,
+    OurMissionComponent,
+    PartnerStyleOneComponent,
+    LanguageCategoryComponent,
+    BecomeInstructorPartnerComponent,
+    FeedbackStyleTwoComponent
+],
     templateUrl: './course-portal-online.component.html',
-    styleUrl: './course-portal-online.component.scss'
+    styleUrl: './course-portal-online.component.scss',
 })
 export class CoursePortalOnlineComponent {}
