@@ -7,10 +7,10 @@
     <div class="container">
         <div class="page-title-content">
             <ul>
-                <li><a routerLink="/">Home</a></li>
-                <li>About</li>
+                <li><a routerLink="/">{{ lang.t('home') }}</a></li>
+                <li>{{ lang.t('aboutUs') }}</li>
             </ul>
-            <h2>About Us</h2>
+            <h2>{{ lang.t('aboutUs') }}</h2>
         </div>
     </div>
 </div>
@@ -34,13 +34,13 @@
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="about-content">
-                    <span class="sub-title">About Us</span>
-                    <h2>ELIKIA French 4 All</h2>
+                    <span class="sub-title">{{ lang.t('aboutPageSubTitle') }}</span>
+                    <h2>{{ lang.t('aboutPageHeading') }}</h2>
                     <h6>
-                        A leading French language center in Johannesburg, Pretoria, and online.
+                        {{ lang.t('aboutPageLead') }}
                     </h6>
                     <p>
-                        For over 10 years, we have been helping children, adults, and professionals develop their French skills. Our approach combines personalized guidance, experienced instructors, and programs tailored to each learner's goals, ensuring effective and enjoyable learning.
+                        {{ lang.t('aboutPageDescription') }}
                     </p>
                 </div>
             </div>
@@ -49,32 +49,32 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="about-text">
-                        <h3>For Children and Teenagers</h3>
+                        <h3>{{ lang.t('aboutPageMissionChildrenTitle') }}</h3>
                         <ul class="features-list">
                             <li>
-                                <i class="bx bx-check"></i> Fun, engaging activities to introduce French.
+                                <i class="bx bx-check"></i> {{ lang.t('aboutPageMissionChildrenLi1') }}
                             </li>
                             <li>
-                                <i class="bx bx-check"></i> Stimulating courses developing oral and written bilingual skills.
+                                <i class="bx bx-check"></i> {{ lang.t('aboutPageMissionChildrenLi2') }}
                             </li>
                             <li>
-                                <i class="bx bx-check"></i> Preparation for official exams and certifications (IB, GCSE, DELF).
+                                <i class="bx bx-check"></i> {{ lang.t('aboutPageMissionChildrenLi3') }}
                             </li>
                             <li>
-                                <i class="bx bx-check"></i> Support from kindergarten through high school, in French schools or the French national curriculum.
+                                <i class="bx bx-check"></i> {{ lang.t('aboutPageMissionChildrenLi4') }}
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="about-text">
-                        <h3>For Adults</h3>
+                        <h3>{{ lang.t('aboutPageMissionAdultsTitle') }}</h3>
                         <ul class="features-list">
                             <li>
-                                <i class="bx bx-check"></i> Guided progression across all CEFR levels (A1–C2), written and oral.
+                                <i class="bx bx-check"></i> {{ lang.t('aboutPageMissionAdultsLi1') }}
                             </li>
                             <li>
-                                <i class="bx bx-check"></i> Certification preparation (DELF, TEF, TCF) for academic, professional, or migration goals.
+                                <i class="bx bx-check"></i> {{ lang.t('aboutPageMissionAdultsLi2') }}
                             </li>
                         </ul>
                     </div>
@@ -83,16 +83,16 @@
                     class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3"
                 >
                     <div class="about-text">
-                        <h3>For Businesses</h3>
+                        <h3>{{ lang.t('aboutPageMissionBusinessTitle') }}</h3>
                         <ul class="features-list">
                             <li>
-                                <i class="bx bx-check"></i> French for Business training for teams working with Francophone Africa.
+                                <i class="bx bx-check"></i> {{ lang.t('aboutPageMissionBusinessLi1') }}
                             </li>
                             <li>
-                                <i class="bx bx-check"></i> French for Meetings and Negotiations programs.
+                                <i class="bx bx-check"></i> {{ lang.t('aboutPageMissionBusinessLi2') }}
                             </li>
                             <li>
-                                <i class="bx bx-check"></i> Practical French skills for travel and assignments in Francophone Africa.
+                                <i class="bx bx-check"></i> {{ lang.t('aboutPageMissionBusinessLi3') }}
                             </li>
                         </ul>
                     </div>
@@ -101,7 +101,7 @@
             <div class="row mt-4">
                 <div class="col-lg-12">
                     <p class="text-center">
-                        We aim to guide every learner toward mastery of French, empowering them to achieve their academic, professional, and personal goals.
+                        {{ lang.t('aboutPageObjective') }}
                     </p>
                 </div>
             </div>
@@ -131,12 +131,10 @@
 <div class="instructor-area pb-75">
     <div class="container">
         <div class="section-title">
-            <span class="sub-title">Make Connections</span>
-            <h2>Our Team</h2>
+            <span class="sub-title">{{ lang.t('aboutPageTeamSubTitle') }}</span>
+            <h2>{{ lang.t('aboutPageTeamTitle') }}</h2>
             <p>
-                ELIKIA French 4 All relies on a strong and experienced team of
-                around twenty specialists and educators to meet the diverse
-                needs of our learners
+                {{ lang.t('aboutPageTeamDescription') }}
             </p>
         </div>
         <app-instructors-style-two />

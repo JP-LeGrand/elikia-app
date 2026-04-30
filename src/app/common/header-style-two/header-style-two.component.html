@@ -8,17 +8,17 @@
                     <ul class="top-header-contact-info">
                         <li>
                             <i class="bx bx-phone-call"></i>
-                            <span>Contact support</span>
+                            <span>{{ lang.t('contactSupport') }}</span>
                             <a href="tel:502464674">+502 464 674</a>
                         </li>
                         <li>
                             <i class="bx bx-map"></i>
-                            <span>Our location</span>
+                            <span>{{ lang.t('ourLocation') }}</span>
                             <a href="#">Johannesburg, South Africa</a>
                         </li>
                         <li>
                             <i class="bx bx-envelope"></i>
-                            <span>Contact email</span>
+                            <span>{{ lang.t('contactEmail') }}</span>
                             <a href="mailto:hello&#64;elikia.com"
                                 >hello&#64;elikia.com</a
                             >
@@ -30,7 +30,7 @@
                     <div class="top-header-btn">
                         <a routerLink="/login" class="default-btn"
                             ><i class="bx bx-log-in icon-arrow before"></i
-                            ><span class="label">Login</span
+                            ><span class="label">{{ lang.t('login') }}</span
                             ><i class="bx bx-log-in icon-arrow after"></i
                         ></a>
                     </div>
@@ -199,7 +199,7 @@
                                 class="nav-link"
                                 routerLinkActive="active"
                                 [routerLinkActiveOptions]="{ exact: true }"
-                                >Home</a
+                                >{{ lang.t('home') }}</a
                             >
                         </li>
 
@@ -209,7 +209,7 @@
                                 class="nav-link"
                                 routerLinkActive="active"
                                 [routerLinkActiveOptions]="{ exact: true }"
-                                >About us</a
+                                >{{ lang.t('aboutUs') }}</a
                             >
                         </li>
                         <li class="nav-item">
@@ -218,7 +218,7 @@
                                 class="nav-link"
                                 routerLinkActive="active"
                                 [routerLinkActiveOptions]="{ exact: true }"
-                                >Our Programs</a
+                                >{{ lang.t('ourPrograms') }}</a
                             >
                         </li>
                          <!-- <li class="nav-item">
@@ -227,7 +227,7 @@
                                 class="nav-link"
                                 routerLinkActive="active"
                                 [routerLinkActiveOptions]="{ exact: true }"
-                                >Dashboard</a
+                                >{{ lang.t('dashboard') }}</a
                             >
                         </li> -->
                         <li class="nav-item">
@@ -236,7 +236,7 @@
                                 class="nav-link"
                                 routerLinkActive="active"
                                 [routerLinkActiveOptions]="{ exact: true }"
-                                >Contact</a
+                                >{{ lang.t('contact') }}</a
                             >
                         </li>
                     </ul>
@@ -252,16 +252,17 @@
                             (click)="toggleClass2()"
                         >
                             <img
-                                src="images/uk-flag.png"
+                                [src]="selectedLanguage.flag"
                                 class="shadow"
-                                alt="image"
+                                [alt]="selectedLanguage.alt"
                             />
-                            <span>Eng <i class="bx bx-chevron-down"></i></span>
+                            <span>{{ selectedLanguage.shortLabel }} <i class="bx bx-chevron-down"></i></span>
                         </button>
                         <div class="dropdown-menu">
                             <a
                                 href="#"
                                 class="dropdown-item d-flex align-items-center"
+                                (click)="setLanguage('en', $event)"
                             >
                                 <img
                                     src="images/uk-flag.png"
@@ -273,6 +274,7 @@
                             <a
                                 href="#"
                                 class="dropdown-item d-flex align-items-center"
+                                (click)="setLanguage('fr', $event)"
                             >
                                 <img
                                     src="images/france-flag.png"
@@ -316,7 +318,7 @@
                     <input
                         type="text"
                         class="input-search"
-                        placeholder="Search here..."
+                        [placeholder]="lang.t('searchHere')"
                     />
                     <button type="submit">
                         <i class="bx bx-search-alt"></i>

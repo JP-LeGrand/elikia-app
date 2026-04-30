@@ -1,7 +1,8 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { ThemeCustomizerService } from '../theme-customizer/theme-customizer.service';
 import { NgClass } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { AppLanguage, LanguageService } from '../language/language.service';
 
 @Component({
     selector: 'app-header-style-two',
@@ -10,6 +11,23 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     styleUrls: ['./header-style-two.component.scss']
 })
 export class HeaderStyleTwoComponent {
+
+    /** Expose service publicly so templates call lang.t('key') directly */
+    readonly lang = inject(LanguageService);
+    readonly themeService = inject(ThemeCustomizerService);
+
+    readonly languages: Record<AppLanguage, { shortLabel: string; flag: string; alt: string }> = {
+        en: {
+            shortLabel: 'Eng',
+            flag: 'images/uk-flag.png',
+            alt: 'English flag'
+        },
+        fr: {
+            shortLabel: 'Fre',
+            flag: 'images/france-flag.png',
+            alt: 'French flag'
+        }
+    };
 
     // Header Sticky
     isSticky: boolean = false;
@@ -23,9 +41,15 @@ export class HeaderStyleTwoComponent {
         }
     }
 
-    constructor(
-        public themeService: ThemeCustomizerService
-    ) {}
+    get selectedLanguage() {
+        return this.languages[this.lang.currentLanguage()];
+    }
+
+    setLanguage(language: AppLanguage, event: Event): void {
+        event.preventDefault();
+        this.lang.setLanguage(language);
+        this.classApplied2 = false;
+    }
 
     classApplied = false;
     toggleClass() {

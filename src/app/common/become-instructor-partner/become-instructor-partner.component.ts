@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ThemeCustomizerService } from '../theme-customizer/theme-customizer.service';
+import { LanguageService } from '../language/language.service';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,7 +10,9 @@ import { RouterLink } from '@angular/router';
     styleUrls: ['./become-instructor-partner.component.scss']
 })
 export class BecomeInstructorPartnerComponent {
-	
+
+    readonly lang = inject(LanguageService);
+
     constructor(
         public themeService: ThemeCustomizerService
     ) {}

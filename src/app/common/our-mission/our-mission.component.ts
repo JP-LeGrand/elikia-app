@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { ThemeCustomizerService } from '../theme-customizer/theme-customizer.service';
 import { RouterLink } from '@angular/router';
+import { LanguageService } from '../language/language.service';
 
 @Component({
     selector: 'app-our-mission',
@@ -10,7 +11,9 @@ import { RouterLink } from '@angular/router';
     styleUrls: ['./our-mission.component.scss']
 })
 export class OurMissionComponent {
-	
+
+    readonly lang = inject(LanguageService);
+
     constructor(
         public themeService: ThemeCustomizerService
     ) {}

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { LanguageService } from '../../../common/language/language.service';
 
 @Component({
     selector: 'app-hometwo-about',
@@ -7,4 +8,6 @@ import { RouterLink } from '@angular/router';
     templateUrl: './hometwo-about.component.html',
     styleUrls: ['./hometwo-about.component.scss']
 })
-export class HometwoAboutComponent {}
+export class HometwoAboutComponent {
+    readonly lang = inject(LanguageService);
+}

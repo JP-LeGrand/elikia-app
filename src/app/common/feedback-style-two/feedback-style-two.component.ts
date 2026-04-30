@@ -1,9 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { ThemeCustomizerService } from '../theme-customizer/theme-customizer.service';
-
-type FeedbackLocale = 'en' | 'fr';
+import { LanguageService } from '../language/language.service';
 
 interface TestimonialItem {
 	image: string;
@@ -21,7 +20,7 @@ interface TestimonialItem {
 })
 export class FeedbackStyleTwoComponent {
 
-	@Input() locale: FeedbackLocale = 'en';
+    readonly lang = inject(LanguageService);
 
     constructor(
         public themeService: ThemeCustomizerService
@@ -78,7 +77,7 @@ export class FeedbackStyleTwoComponent {
 	];
 
 	get noticeText(): string {
-		return this.authenticityNotice[this.locale];
+		return this.authenticityNotice[this.lang.currentLanguage()];
 	}
 
     testimonialsSlides: OwlOptions = {

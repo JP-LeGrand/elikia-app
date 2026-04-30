@@ -1,0 +1,252 @@
+import type { TranslationKeys } from './en';
+
+export const fr: Record<TranslationKeys, string> = {
+    // Header
+    contactSupport: 'Contacter le support',
+    ourLocation: 'Notre emplacement',
+    contactEmail: 'E-mail de contact',
+    login: 'Connexion',
+    home: 'Accueil',
+    aboutUs: 'À propos',
+    ourPrograms: 'Nos programmes',
+    dashboard: 'Tableau de bord',
+    contact: 'Contact',
+    searchHere: 'Rechercher ici...',
+
+    // Home banner
+    bannerSubTitle: 'ELIKIA French4All',
+    bannerTitle: 'ELIKIA French4All',
+    bannerDescription: "Votre centre de référence pour l'apprentissage du français et la réussite dans le système scolaire français",
+    bannerMoreInfo: "Plus d'infos",
+    bannerContactUs: 'Contactez-nous',
+
+    // About section
+    aboutSubTitle: 'À propos',
+    aboutHeading: "Plus de 10 ans d'expérience dans l'enseignement du français pour enfants, adultes et professionnels.",
+    aboutLi1: 'Cours de français pour enfants, adolescents, adultes et professionnels',
+    aboutLi2: "Cours privés et soutien scolaire personnalisé pour les étudiants de l'école française",
+    aboutLi3: "Formations sur mesure pour entreprises et professionnels travaillant avec l\'Afrique francophone",
+    aboutLocation: 'En présentiel ou en ligne à Johannesburg et Pretoria.',
+    aboutViewPrograms: 'Voir les programmes',
+
+    // Programs / language-category section
+    programsSectionSubTitle: 'Bienvenue chez Elikia French4All',
+    programsSectionTitle: 'Nos programmes',
+    programsExplore: 'Explorer',
+    programsChildren: 'Pour les enfants et adolescents',
+    programsAdults: 'Pour les adultes',
+    programsCompanies: 'Pour les entreprises et professionnels',
+    programsCertification: 'Préparation aux certifications',
+
+    // Mission section
+    missionSubTitle: 'Notre mission',
+    missionTitle: 'Pourquoi nous ?',
+    missionSlide1Heading: 'ELIKIA French 4 All a fait ses preuves :',
+    missionSlide1Li1: "Plus de 10 ans d'expérience sur le terrain.",
+    missionSlide1Li2: "Plus de XXX enfants accompagnés dans l'apprentissage du français et le soutien scolaire.",
+    missionSlide1Li3: 'Plus de XXX adultes et professionnels formés avec succès.',
+    missionSlide1Li4: 'Taux de réussite de 100 % de nos apprenants aux examens et certifications.',
+    missionSlide2Heading: 'Un endroit où vous pouvez réussir',
+    missionSlide2Li1: "Partenariat de plus de 8 ans avec le Lycée Français Jules Verne (Johannesburg et Pretoria) : mise en place et organisation des dispositifs FLE, French Passerelle et Français +, pour les élèves de la maternelle au collège, ainsi que suivi des études dirigées du CP au CM2.",
+    missionSlide2Li2: 'Collaboration avec Crawford Bryanston et Crawford Sandton : gestion de programmes périscolaires de français.',
+    missionSlide2Li3: "Accompagnement des enfants des salariés d'entreprises implantées à Johannesburg, notamment Huawei, Ericsson, ICBC Africa, Aon…",
+    missionViewPrograms: 'Voir les programmes',
+    missionClosing: 'Grâce à ces expériences, nous offrons à chaque apprenant un enseignement structuré et de qualité, adapté à ses besoins, quel que soit son âge ou son objectif.',
+
+    // About page (page-one)
+    aboutPageSubTitle: 'Qui sommes-nous ?',
+    aboutPageHeading: 'ELIKIA French 4 All',
+    aboutPageLead: "Votre centre de référence pour l'apprentissage du français à Johannesburg, Pretoria ou en ligne.",
+    aboutPageDescription: "Depuis plus de 10 ans, nous sommes au service des enfants, des adultes et des professionnels qui souhaitent développer leurs compétences en français. Notre approche pédagogique repose sur un accompagnement personnalisé, des enseignants expérimentés et des programmes adaptés aux objectifs de chaque apprenant.",
+    aboutPageMissionChildrenTitle: 'Auprès des enfants et adolescents',
+    aboutPageMissionChildrenLi1: "Offrir des activités ludiques d'initiation au français.",
+    aboutPageMissionChildrenLi2: 'Proposer des cours stimulants permettant d’acquérir les compétences orales et écrites nécessaires pour devenir bilingue.',
+    aboutPageMissionChildrenLi3: 'Préparer aux examens ou aux certifications officielles en français (IB, GCSE, DELF).',
+    aboutPageMissionChildrenLi4: 'Assurer un accompagnement scolaire, de la maternelle à la Terminale, pour les élèves inscrits dans des écoles françaises ou souhaitant conserver le niveau scolaire de l’Éducation nationale française.',
+    aboutPageMissionAdultsTitle: 'Auprès des adultes',
+    aboutPageMissionAdultsLi1: 'Accompagner nos apprenants jusqu’au niveau souhaité du cadre européen commun de référence pour les langues (A1, A2…C2), pour les compétences écrites et/ou orales.',
+    aboutPageMissionAdultsLi2: 'Préparer ceux qui le souhaitent aux certifications (DELF, TEF ou TCF), notamment dans le cadre de projets d’études, projets professionnels ou projets d’émigration.',
+    aboutPageMissionBusinessTitle: 'Auprès des entreprises',
+    aboutPageMissionBusinessLi1: 'Offrir des formations en français des affaires, pour travailler avec l’Afrique francophone.',
+    aboutPageMissionBusinessLi2: 'Proposer des formations en français pour les réunions et les négociations.',
+    aboutPageMissionBusinessLi3: 'Mettre à disposition des équipes les notions de français nécessaires pour les déplacements et missions en Afrique francophone.',
+    aboutPageObjective: 'Notre objectif est d’accompagner chaque apprenant vers une maîtrise du français qui lui permettra d’atteindre ses objectifs académiques, professionnels ou personnels.',
+    aboutPageTeamSubTitle: 'Notre équipe',
+    aboutPageTeamTitle: 'Notre équipe',
+    aboutPageTeamDescription: 'ELIKIA French 4 All s’appuie sur une équipe solide et expérimentée, composée d’une vingtaine d’intervenants spécialisés pour répondre à tous les besoins de nos apprenants.',
+
+    // Our story / vision section
+    storyVisionTitle: 'Notre vision',
+    storyVisionText: 'La langue française est stratégique dans notre monde globalisé et nous souhaitons mettre cet atout à disposition des enfants, des adultes et des professionnels pour élargir leurs opportunités académiques, personnelles et professionnelles.',
+
+    // Our values section
+    valuesTitle: 'Nos valeurs',
+    valuesExcellenceTitle: 'Excellence',
+    valuesExcellenceText: 'Des cours de qualité, des enseignants expérimentés.',
+    valuesAdaptabilityTitle: 'Adaptabilité',
+    valuesAdaptabilityText: 'Des programmes personnalisés selon l’âge, le niveau et les besoins.',
+    valuesMotivationTitle: 'Motivation',
+    valuesMotivationText: 'Apprendre le français doit être stimulant et motivant.',
+    valuesProfessionalismTitle: 'Professionnalisme',
+    valuesProfessionalismText: 'Un service structuré et fiable avec des résultats mesurables, pour particuliers et entreprises.',
+
+    // Instructors section
+    instructorsCard1Title: 'Dr Débora Lolonga',
+    instructorsCard1Role: 'Fondatrice et directrice pédagogique',
+    instructorsCard1Text: 'Supervise la conception et la mise à jour des programmes pour assurer qualité, cohérence et efficacité de tous nos cours.',
+    instructorsCard2Title: 'Enseignants certifiés et agréés',
+    instructorsCard2Role: 'Cours formels et préparation aux examens',
+    instructorsCard2Text: 'Assurent les cours formels et la préparation aux examens et certifications. Prennent en charge le soutien scolaire des lycéens.',
+    instructorsCard3Title: 'Étudiants tuteurs',
+    instructorsCard3Role: 'Soutien scolaire pour jeunes apprenants',
+    instructorsCard3Text: 'Accompagnent les enfants et adolescents dans le soutien scolaire.',
+    instructorsCard4Title: 'Animateurs et animatrices',
+    instructorsCard4Role: 'Fun Clubs et activités interactives',
+    instructorsCard4Text: 'Encadrent les Fun Clubs et activités ludiques pour les enfants, afin de rendre l’apprentissage du français motivant et interactif.',
+    instructorsCard5Title: 'Au pairs et nounous francophones',
+    instructorsCard5Role: 'Soutien quotidien en immersion française',
+    instructorsCard5Text: 'Offrent aux enfants une exposition quotidienne à la langue, renforçant l’immersion et la pratique du français en dehors des cours.',
+    instructorsClosing: 'Grâce à cette combinaison de pédagogie adaptée, expertise et supervision, chaque apprenant bénéficie d’un apprentissage structuré et stimulant, quel que soit son âge ou son objectif.',
+    // Programs page
+    coursesPageBreadcrumb: 'Programmes',
+    coursesPageTitle: 'Nos Programmes',
+    coursesPageSubTitle: 'Nos Programmes',
+    coursesPageDescription: "Chez ELIKIA French 4 All, chaque programme est conçu pour s'adapter à votre profil et à vos objectifs, avec une approche flexible, personnalisée et motivante.",
+
+    // Tab labels
+    coursesTabAll: 'Tout',
+    coursesTabAdults: 'Adultes',
+    coursesTabCompanies: 'Entreprises et professionnels',
+    coursesTabChildren: 'Enfants et adolescents',
+    coursesTabDelf: 'DELF / Préparation aux certifications',
+    coursesTabFormats: 'Formats de formation',
+
+    // Overview tag
+    coursesOverviewTag: "Vue d'ensemble",
+
+    // Tab1 – Children overview card
+    coursesChildrenOverviewTitle: 'Pour les enfants et adolescents',
+    coursesChildrenOverviewDesc: "Nous accompagnons les enfants et adolescents dans l'apprentissage du français à travers des formules adaptées à leur âge, leur niveau et leurs besoins :",
+    coursesChildrenLi1Bold: 'Cours de français structurés',
+    coursesChildrenLi1Text: 'Développez progressivement vos compétences orales et écrites pour un français solide et durable.',
+    coursesChildrenLi2Bold: 'Préparation aux examens et certifications',
+    coursesChildrenLi2Text: 'Préparez-vous aux examens internationaux et certifications en français : DELF, IB, GCSE, etc.',
+    coursesChildrenLi3Bold: 'Soutien scolaire en français',
+    coursesChildrenLi3Text: "Accompagnement de la maternelle à la Terminale pour les élèves inscrits dans des écoles françaises ou souhaitant suivre le programme de l'Éducation nationale française.",
+    coursesChildrenLi4Bold: 'Fun Clubs et activités ludiques',
+    coursesChildrenLi4Text: "Participez à des activités interactives qui rendent l'apprentissage du français motivant et dynamique.",
+    coursesChildrenLi5Bold: 'Immersion linguistique',
+    coursesChildrenLi5Text: 'Renforcez votre pratique du français à travers des ateliers, des jeux et des activités quotidiennes.',
+
+    // Tab1 – Adults overview card
+    coursesAdultsOverviewTitle: 'Pour les adultes',
+    coursesAdultsOverviewDesc: 'Nos programmes adultes sont conçus pour répondre à des objectifs personnels, professionnels ou académiques :',
+    coursesAdultsLi1Bold: 'Cours conversationnels',
+    coursesAdultsLi1Text: 'Gagnez en confiance et fluidité pour communiquer efficacement au quotidien.',
+    coursesAdultsLi2Bold: 'Cours de français général',
+    coursesAdultsLi2Text: 'Progressez à votre rythme, selon le Cadre européen commun de référence pour les langues (A1 à C2).',
+    coursesAdultsLi3Bold: 'Préparation aux certifications',
+    coursesAdultsLi3Text: "Préparez les examens officiels : DELF, TEF, TCF, adaptés à vos projets d'études, professionnels ou d'émigration.",
+    coursesAdultsLi4Bold: 'Cours personnalisés',
+    coursesAdultsLi4Text: 'Programmes sur mesure, conçus pour atteindre vos objectifs spécifiques.',
+
+    // Tab1 – Companies overview card
+    coursesCompaniesOverviewTitle: 'Pour les entreprises',
+    coursesCompaniesOverviewDesc: 'Nous proposons des formations professionnelles adaptées aux besoins des équipes et entreprises :',
+    coursesCompaniesLi1Bold: 'Français des affaires',
+    coursesCompaniesLi1Text: 'Maîtrisez le français pour collaborer efficacement avec des partenaires en Afrique francophone.',
+    coursesCompaniesLi2Bold: 'Français pour réunions et négociations',
+    coursesCompaniesLi2Text: 'Développez le vocabulaire et les compétences nécessaires pour vos échanges professionnels.',
+    coursesCompaniesLi3Bold: 'Français pour déplacements professionnels',
+    coursesCompaniesLi3Text: 'Formations pratiques pour missions et voyages en Afrique francophone.',
+    coursesCompaniesLi4Bold: 'Formations sur mesure',
+    coursesCompaniesLi4Text: 'Programmes adaptés à votre secteur et aux besoins spécifiques de vos équipes.',
+
+    // Tab1 – Training Formats overview card
+    coursesFormatsOverviewTitle: 'Formats de formation',
+    coursesFormatsOverviewDesc: 'Nos cours sont flexibles et accessibles :',
+    coursesFormatsLi1: 'En présentiel à Johannesburg et Pretoria',
+    coursesFormatsLi2: "En ligne, depuis n'importe où",
+    coursesFormatsLi3: 'Individuels ou en groupe',
+    coursesFormatsLi4: 'Pour particuliers, enfants, adultes ou entreprises',
+
+    // Category labels on course cards
+    coursesCatAdults: 'Adultes',
+    coursesCatCompanies: 'Entreprises et professionnels',
+    coursesCatChildren: 'Enfants et adolescents',
+    coursesCatDelf: 'DELF / Préparation aux certifications',
+
+    // CTA button
+    coursesRequestQuote: 'Demander un devis',
+
+    // Tab2 – Adults course card titles
+    coursesAdultsCard1Title: 'Cours de français conversationnels pour développer confiance et fluidité',
+    coursesAdultsCard2Title: 'Préparation aux certifications officielles (DELF, TEF, TCF)',
+
+    // Tab3 – Companies course card titles
+    coursesCompaniesCard1Title: "Formations sur mesure en français pour entreprises et professionnels travaillant avec l’Afrique francophone",
+    coursesCompaniesCard2Title: 'Cours adaptés aux besoins spécifiques des équipes ou secteurs',
+    coursesCompaniesCard3Title: 'Sessions en entreprise, en présentiel ou en ligne',
+
+    // Tab4 – Children course card titles
+    coursesChildrenCard1Title: 'Cours de français structurés et préparation aux certifications ou examens (DELF, IB, GCSE, etc.)',
+    coursesChildrenCard2Title: 'French Fun Clubs pour découvrir le français à travers des activités ludiques et interactives',
+    coursesChildrenCard3Title: 'Soutien scolaire, de la maternelle à la Terminale, pour les élèves inscrits dans des écoles françaises ou souhaitant rester à jour avec le programme de l’Éducation nationale française',
+
+    // Tab5 – DELF card
+    coursesDelfCat: 'DELF / Préparation aux certifications',
+    coursesDelfCard1Title: 'Parcours complet de préparation au DELF et aux certifications',
+
+    // Tab6 – Programs at a glance table
+    coursesGlanceTitle: "Nos Programmes – D'un coup d'œil",
+    coursesTableAudience: 'Public',
+    coursesTableProgram: 'Programme',
+    coursesTableKeyBenefits: 'Points clés',
+    coursesTableChildrenAudience: 'Enfants & Adolescents',
+    coursesTableChildrenProg1: 'Cours de français structurés',
+    coursesTableChildrenBen1: "Développer progressivement des compétences solides à l'oral et à l'écrit",
+    coursesTableChildrenProg2: 'Préparation aux examens & certifications',
+    coursesTableChildrenBen2: 'DELF, IB, GCSE – réussir en toute confiance',
+    coursesTableChildrenProg3: 'Soutien scolaire & accompagnement',
+    coursesTableChildrenBen3: "De la maternelle à la Terminale, pour les élèves français ou suivant le programme de l'Éducation nationale",
+    coursesTableChildrenProg4: 'Fun Clubs & activités ludiques',
+    coursesTableChildrenBen4: "Rendre l'apprentissage du français dynamique et motivant",
+    coursesTableChildrenProg5: 'Immersion linguistique',
+    coursesTableChildrenBen5: 'Pratique quotidienne via ateliers, jeux et activités',
+    coursesTableAdultsAudience: 'Adultes',
+    coursesTableAdultsProg1: 'Français conversationnel',
+    coursesTableAdultsBen1: 'Gagner en confiance et fluidité pour communiquer au quotidien',
+    coursesTableAdultsProg2: 'Cours de français général',
+    coursesTableAdultsBen2: 'Progresser à son rythme (CECR A1–C2)',
+    coursesTableAdultsProg3: 'Préparation aux certifications',
+    coursesTableAdultsBen3: "DELF, TEF, TCF – pour études, carrière ou projets d'émigration",
+    coursesTableAdultsProg4: 'Cours personnalisés',
+    coursesTableAdultsBen4: 'Programmes sur mesure pour atteindre des objectifs précis',
+    coursesTableCompaniesAudience: 'Entreprises',
+    coursesTableCompaniesProg1: 'Français des affaires',
+    coursesTableCompaniesBen1: 'Collaborer efficacement avec des partenaires en Afrique francophone',
+    coursesTableCompaniesProg2: 'Français pour réunions & négociations',
+    coursesTableCompaniesBen2: 'Développer le vocabulaire et les compétences professionnelles',
+    coursesTableCompaniesProg3: 'Français pour déplacements professionnels',
+    coursesTableCompaniesBen3: 'Formation pratique pour missions et voyages en Afrique francophone',
+    coursesTableCompaniesProg4: 'Programmes sur mesure',
+    coursesTableCompaniesBen4: 'Adaptés à votre secteur et aux besoins de vos équipes',
+
+    // Training formats section heading (tab6)
+    coursesFormatsHeading: 'Formats de formation :',
+
+    // Become Instructor Partner section
+    delfTitle: 'Préparation aux certifications',
+    delfLi1: 'Préparation au DELF, DALF, TEF et TCF',
+    delfLi2: "Cours axés sur l'oral et l'écrit pour enfants, adolescents et adultes",
+    delfLi3: 'Suivi par des enseignants expérimentés et qualifiés',
+    delfButtonLabel: 'Demander un devis',
+
+    instructorTitle: 'Devenir enseignant',
+    instructorDescription: "Choisissez parmi nos programmes et rejoignez notre équipe d'éducateurs passionnés",
+    instructorButtonLabel: 'Postuler maintenant',
+
+    partnerTitle: 'Devenir partenaire',
+    partnerDescription: "Rejoignez notre réseau et collaborez avec nous pour apporter l'éducation en français à plus d'apprenants",
+    partnerButtonLabel: 'Nous contacter',
+};

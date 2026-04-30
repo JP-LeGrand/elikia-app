@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../language/language.service';
 
 @Component({
     selector: 'app-our-values',
@@ -6,4 +7,8 @@ import { Component } from '@angular/core';
     templateUrl: './our-values.component.html',
     styleUrls: ['./our-values.component.scss']
 })
-export class OurValuesComponent {}
+export class OurValuesComponent {
+
+    readonly lang = inject(LanguageService);
+
+}

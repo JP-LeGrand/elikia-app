@@ -1,5 +1,7 @@
-import { Component, OnInit, OnDestroy, afterNextRender } from '@angular/core';
+import { Component, OnInit, OnDestroy, afterNextRender, inject } from '@angular/core';
 import { ThemeCustomizerService } from '../../common/theme-customizer/theme-customizer.service';
+import { LanguageService } from '../../common/language/language.service';
+import { TranslationKeys } from '../../common/language/translations/en';
 import { RouterLink, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { HeaderStyleTwoComponent } from "../../common/header-style-two/header-style-two.component";
@@ -39,6 +41,21 @@ interface ProgramTab {
 export class CoursesGsocThreePageComponent implements OnInit, OnDestroy {
 
     private paramsSub?: Subscription;
+    readonly lang = inject(LanguageService);
+
+    private readonly tabLabelKeys: Record<string, TranslationKeys> = {
+        tab1: 'coursesTabAll',
+        tab2: 'coursesTabAdults',
+        tab3: 'coursesTabCompanies',
+        tab4: 'coursesTabChildren',
+        tab5: 'coursesTabDelf',
+        tab6: 'coursesTabFormats',
+    };
+
+    tabLabel(id: string): string {
+        const key = this.tabLabelKeys[id];
+        return key ? this.lang.t(key) : id;
+    }
 
     constructor(
         public themeService: ThemeCustomizerService,

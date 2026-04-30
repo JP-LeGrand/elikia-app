@@ -7,10 +7,10 @@
     <div class="container">
         <div class="page-title-content">
             <ul>
-                <li><a routerLink="/">Home</a></li>
-                <li>Programs</li>
+                <li><a routerLink="/">{{ lang.t('home') }}</a></li>
+                <li>{{ lang.t('coursesPageBreadcrumb') }}</li>
             </ul>
-            <h2>Our Programs</h2>
+            <h2>{{ lang.t('coursesPageTitle') }}</h2>
         </div>
     </div>
 </div>
@@ -21,15 +21,15 @@
 >
     <div class="container">
         <div class="section-title text-start">
-            <span class="sub-title">Discover Programs</span>
-            <h3>At ELIKIA French 4 All, every program is designed to match your profile and goals, with a flexible, personalized, and engaging approach.</h3>
+            <span class="sub-title">{{ lang.t('coursesPageSubTitle') }}</span>
+            <h3>{{ lang.t('coursesPageDescription') }}</h3>
             <!-- <a routerLink="/courses-3-columns-style-1" class="default-btn"><i class='bx bx-show-alt icon-arrow before'></i><span class="label">All Programs</span><i class="bx bx-show-alt icon-arrow after"></i></a> -->
         </div>
         <ul class="nav-tabset">
             @for (tab of tabs; track tab.id) {
                 <li class="nav-tab" [class.active]="currentTab === tab.id">
                     <span [class.active]="currentTab === tab.id" (click)="switchTab($event, tab.id)">
-                        {{ tab.label }} ({{ getTabCount(tab).toString().padStart(2, '0') }})
+                        {{ tabLabel(tab.id) }} ({{ getTabCount(tab).toString().padStart(2, '0') }})
                     </span>
                 </li>
             }
@@ -45,22 +45,20 @@
                                         <img src="images/language-courses/1.jpg" alt="Children and Teenagers">
                                     </a>
                                     <div class="courses-tag">
-                                        <span class="d-block">Overview</span>
+                                        <span class="d-block">{{ lang.t('coursesOverviewTag') }}</span>
                                     </div>
                                 </div>
                                 <div class="courses-content">
                                     <h3>
-                                        <a href="" (click)="switchTab($event, 'tab4')" class="d-inline-block">For Children and Teenagers</a>
+                                        <a href="" (click)="switchTab($event, 'tab4')" class="d-inline-block">{{ lang.t('coursesChildrenOverviewTitle') }}</a>
                                     </h3>
-                                    <p>
-                                        We guide children and teenagers in learning French through programs tailored to their age, level, and objectives:
-                                    </p>
+                                    <p>{{ lang.t('coursesChildrenOverviewDesc') }}</p>
                                     <ul>
-                                        <li><strong>Structured French Courses:</strong> Gradually build your oral and written skills to develop a strong and lasting foundation in French.</li>
-                                        <li><strong>Exam and Certification Preparation:</strong> Prepare for international French exams and certifications: DELF, IB, GCSE, and more.</li>
-                                        <li><strong>French Tutoring and Academic Support:</strong> Support from kindergarten through high school for students enrolled in French schools or following the French national curriculum.</li>
-                                        <li><strong>Fun Clubs and Interactive Activities:</strong> Participate in engaging activities that make learning French motivating and dynamic.</li>
-                                        <li><strong>Language Immersion:</strong> Strengthen your French through workshops, games, and daily practice opportunities.</li>
+                                        <li><strong>{{ lang.t('coursesChildrenLi1Bold') }}:</strong> {{ lang.t('coursesChildrenLi1Text') }}</li>
+                                        <li><strong>{{ lang.t('coursesChildrenLi2Bold') }}:</strong> {{ lang.t('coursesChildrenLi2Text') }}</li>
+                                        <li><strong>{{ lang.t('coursesChildrenLi3Bold') }}:</strong> {{ lang.t('coursesChildrenLi3Text') }}</li>
+                                        <li><strong>{{ lang.t('coursesChildrenLi4Bold') }}:</strong> {{ lang.t('coursesChildrenLi4Text') }}</li>
+                                        <li><strong>{{ lang.t('coursesChildrenLi5Bold') }}:</strong> {{ lang.t('coursesChildrenLi5Text') }}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -72,21 +70,19 @@
                                         <img src="images/motivation-course/courses/courses-6.jpg" alt="Adults">
                                     </a>
                                     <div class="courses-tag">
-                                        <span class="d-block">Overview</span>
+                                        <span class="d-block">{{ lang.t('coursesOverviewTag') }}</span>
                                     </div>
                                 </div>
                                 <div class="courses-content">
                                     <h3>
-                                        <a href="" (click)="switchTab($event, 'tab2')" class="d-inline-block">For Adults</a>
+                                        <a href="" (click)="switchTab($event, 'tab2')" class="d-inline-block">{{ lang.t('coursesAdultsOverviewTitle') }}</a>
                                     </h3>
-                                    <p>
-                                        Our adult programs are designed to help you achieve personal, professional, or academic goals:
-                                    </p>
+                                    <p>{{ lang.t('coursesAdultsOverviewDesc') }}</p>
                                     <ul>
-                                        <li><strong>Conversational French:</strong> Gain confidence and fluency to communicate effectively in everyday situations.</li>
-                                        <li><strong>General French Courses:</strong> Progress at your own pace according to the Common European Framework of Reference for Languages (A1 to C2).</li>
-                                        <li><strong>Certification Preparation:</strong> Prepare for official exams: DELF, TEF, TCF, tailored to your study, career, or relocation projects.</li>
-                                        <li><strong>Personalized Courses:</strong> Customized programs designed to meet your specific goals.</li>
+                                        <li><strong>{{ lang.t('coursesAdultsLi1Bold') }}:</strong> {{ lang.t('coursesAdultsLi1Text') }}</li>
+                                        <li><strong>{{ lang.t('coursesAdultsLi2Bold') }}:</strong> {{ lang.t('coursesAdultsLi2Text') }}</li>
+                                        <li><strong>{{ lang.t('coursesAdultsLi3Bold') }}:</strong> {{ lang.t('coursesAdultsLi3Text') }}</li>
+                                        <li><strong>{{ lang.t('coursesAdultsLi4Bold') }}:</strong> {{ lang.t('coursesAdultsLi4Text') }}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -98,21 +94,19 @@
                                         <img src="images/motivation-course/courses/courses-2.jpg" alt="Companies">
                                     </a>
                                     <div class="courses-tag">
-                                        <span class="d-block">Overview</span>
+                                        <span class="d-block">{{ lang.t('coursesOverviewTag') }}</span>
                                     </div>
                                 </div>
                                 <div class="courses-content">
                                     <h3>
-                                        <a href="" (click)="switchTab($event, 'tab3')" class="d-inline-block">For Companies</a>
+                                        <a href="" (click)="switchTab($event, 'tab3')" class="d-inline-block">{{ lang.t('coursesCompaniesOverviewTitle') }}</a>
                                     </h3>
-                                    <p>
-                                        We offer professional French training programs designed for teams and businesses:
-                                    </p>
+                                    <p>{{ lang.t('coursesCompaniesOverviewDesc') }}</p>
                                     <ul>
-                                        <li><strong>Business French:</strong> Master French to collaborate effectively with partners in Francophone Africa.</li>
-                                        <li><strong>French for Meetings and Negotiations:</strong> Build the vocabulary and skills needed for professional interactions.</li>
-                                        <li><strong>French for Business Travel:</strong> Practical training for assignments and trips across Francophone Africa.</li>
-                                        <li><strong>Custom Programs:</strong> Tailored courses to fit your industry and your team’s specific needs.</li>
+                                        <li><strong>{{ lang.t('coursesCompaniesLi1Bold') }}:</strong> {{ lang.t('coursesCompaniesLi1Text') }}</li>
+                                        <li><strong>{{ lang.t('coursesCompaniesLi2Bold') }}:</strong> {{ lang.t('coursesCompaniesLi2Text') }}</li>
+                                        <li><strong>{{ lang.t('coursesCompaniesLi3Bold') }}:</strong> {{ lang.t('coursesCompaniesLi3Text') }}</li>
+                                        <li><strong>{{ lang.t('coursesCompaniesLi4Bold') }}:</strong> {{ lang.t('coursesCompaniesLi4Text') }}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -124,21 +118,19 @@
                                         <img src="images/motivation-course/courses/courses-8.jpg" alt="Training Formats">
                                     </a>
                                     <div class="courses-tag">
-                                        <span class="d-block">Overview</span>
+                                        <span class="d-block">{{ lang.t('coursesOverviewTag') }}</span>
                                     </div>
                                 </div>
                                 <div class="courses-content">
                                     <h3>
-                                        <a href="" (click)="switchTab($event, 'tab6')" class="d-inline-block">Training Formats</a>
+                                        <a href="" (click)="switchTab($event, 'tab6')" class="d-inline-block">{{ lang.t('coursesFormatsOverviewTitle') }}</a>
                                     </h3>
-                                    <p>
-                                        Our courses are flexible and accessible:
-                                    </p>
+                                    <p>{{ lang.t('coursesFormatsOverviewDesc') }}</p>
                                     <ul>
-                                        <li>In-person in Johannesburg and Pretoria</li>
-                                        <li>Online, from anywhere</li>
-                                        <li>Individual or group sessions</li>
-                                        <li>Programs for children, adults, and corporate teams</li>
+                                        <li>{{ lang.t('coursesFormatsLi1') }}</li>
+                                        <li>{{ lang.t('coursesFormatsLi2') }}</li>
+                                        <li>{{ lang.t('coursesFormatsLi3') }}</li>
+                                        <li>{{ lang.t('coursesFormatsLi4') }}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -155,7 +147,7 @@
                                 <div class="courses-image">
                                     <a routerLink="/single-course" class="d-block"><img src="images/courses/courses1.jpg" alt="image"></a>
                                     <div class="courses-tag">
-                                        <a routerLink="/courses-3-columns-style-1" class="d-block">Adults</a>
+                                        <a routerLink="/courses-3-columns-style-1" class="d-block">{{ lang.t('coursesCatAdults') }}</a>
                                     </div>
                                 </div>
                                 <div class="courses-content">
@@ -163,8 +155,8 @@
                                         <img src="images/user1.jpg" class="rounded-circle mr-2" alt="image">
                                         <span>Steven Smith</span>
                                     </div>
-                                    <h3><a routerLink="/single-course" class="d-inline-block">Conversational French courses to build confidence and fluency</a></h3>
-                                    <a routerLink="/contact" class="default-btn"><span class="label">Request a Quote</span></a>
+                                    <h3><a routerLink="/single-course" class="d-inline-block">{{ lang.t('coursesAdultsCard1Title') }}</a></h3>
+                                    <a routerLink="/contact" class="default-btn"><span class="label">{{ lang.t('coursesRequestQuote') }}</span></a>
                                 </div>
                             </div>
                         </div>
@@ -173,7 +165,7 @@
                                 <div class="courses-image">
                                     <a routerLink="/single-course" class="d-block"><img src="images/courses/courses6.jpg" alt="image"></a>
                                     <div class="courses-tag">
-                                        <a routerLink="/courses-3-columns-style-1" class="d-block">Adults</a>
+                                        <a routerLink="/courses-3-columns-style-1" class="d-block">{{ lang.t('coursesCatAdults') }}</a>
                                     </div>
                                 </div>
                                 <div class="courses-content">
@@ -181,8 +173,8 @@
                                         <img src="images/user6.jpg" class="rounded-circle mr-2" alt="image">
                                         <span>David Warner</span>
                                     </div>
-                                    <h3><a routerLink="/single-course" class="d-inline-block">Preparation for official certifications (DELF, TEF, TCF)</a></h3>
-                                    <a routerLink="/contact" class="default-btn"><span class="label">Request a Quote</span></a>
+                                    <h3><a routerLink="/single-course" class="d-inline-block">{{ lang.t('coursesAdultsCard2Title') }}</a></h3>
+                                    <a routerLink="/contact" class="default-btn"><span class="label">{{ lang.t('coursesRequestQuote') }}</span></a>
                                 </div>
                             </div>
                         </div>
@@ -198,7 +190,7 @@
                                 <div class="courses-image">
                                     <a routerLink="/single-course" class="d-block"><img src="images/courses/courses3.jpg" alt="image"></a>
                                     <div class="courses-tag">
-                                        <a routerLink="/courses-3-columns-style-1" class="d-block">Companies and Professionals</a>
+                                        <a routerLink="/courses-3-columns-style-1" class="d-block">{{ lang.t('coursesCatCompanies') }}</a>
                                     </div>
                                 </div>
                                 <div class="courses-content">
@@ -206,8 +198,8 @@
                                         <img src="images/user3.jpg" class="rounded-circle mr-2" alt="image">
                                         <span>James Anderson</span>
                                     </div>
-                                    <h3><a routerLink="/single-course" class="d-inline-block">Tailored French language training for businesses and professionals dealing with Francophone Africa</a></h3>
-                                    <a routerLink="/contact" class="default-btn"><span class="label">Request a Quote</span></a>
+                                    <h3><a routerLink="/single-course" class="d-inline-block">{{ lang.t('coursesCompaniesCard1Title') }}</a></h3>
+                                    <a routerLink="/contact" class="default-btn"><span class="label">{{ lang.t('coursesRequestQuote') }}</span></a>
                                 </div>
                             </div>
                         </div>
@@ -216,7 +208,7 @@
                                 <div class="courses-image">
                                     <a routerLink="/single-course" class="d-block"><img src="images/courses/courses5.jpg" alt="image"></a>
                                     <div class="courses-tag">
-                                        <a routerLink="/courses-3-columns-style-1" class="d-block">Companies and Professionals</a>
+                                        <a routerLink="/courses-3-columns-style-1" class="d-block">{{ lang.t('coursesCatCompanies') }}</a>
                                     </div>
                                 </div>
                                 <div class="courses-content">
@@ -224,8 +216,8 @@
                                         <img src="images/user5.jpg" class="rounded-circle mr-2" alt="image">
                                         <span>Lina D'Souza</span>
                                     </div>
-                                    <h3><a routerLink="/single-course" class="d-inline-block">Courses designed to meet specific team or sector needs</a></h3>
-                                    <a routerLink="/contact" class="default-btn"><span class="label">Request a Quote</span></a>
+                                    <h3><a routerLink="/single-course" class="d-inline-block">{{ lang.t('coursesCompaniesCard2Title') }}</a></h3>
+                                    <a routerLink="/contact" class="default-btn"><span class="label">{{ lang.t('coursesRequestQuote') }}</span></a>
                                 </div>
                             </div>
                         </div>
@@ -234,7 +226,7 @@
                                 <div class="courses-image">
                                     <a routerLink="/single-course" class="d-block"><img src="images/courses/courses3.jpg" alt="image"></a>
                                     <div class="courses-tag">
-                                        <a routerLink="/courses-3-columns-style-1" class="d-block">Companies and Professionals</a>
+                                        <a routerLink="/courses-3-columns-style-1" class="d-block">{{ lang.t('coursesCatCompanies') }}</a>
                                     </div>
                                 </div>
                                 <div class="courses-content">
@@ -242,8 +234,8 @@
                                         <img src="images/user3.jpg" class="rounded-circle mr-2" alt="image">
                                         <span>James Anderson</span>
                                     </div>
-                                    <h3><a routerLink="/single-course" class="d-inline-block">On-site training in Johannesburg and Pretoria or online</a></h3>
-                                    <a routerLink="/contact" class="default-btn"><span class="label">Request a Quote</span></a>
+                                    <h3><a routerLink="/single-course" class="d-inline-block">{{ lang.t('coursesCompaniesCard3Title') }}</a></h3>
+                                    <a routerLink="/contact" class="default-btn"><span class="label">{{ lang.t('coursesRequestQuote') }}</span></a>
                                 </div>
                             </div>
                         </div>
@@ -259,7 +251,7 @@
                                 <div class="courses-image">
                                     <a routerLink="/single-course" class="d-block"><img src="images/courses/courses2.jpg" alt="image"></a>
                                     <div class="courses-tag">
-                                        <a routerLink="/courses-3-columns-style-1" class="d-block">Children and Teenagers</a>
+                                        <a routerLink="/courses-3-columns-style-1" class="d-block">{{ lang.t('coursesCatChildren') }}</a>
                                     </div>
                                 </div>
                                 <div class="courses-content">
@@ -267,8 +259,8 @@
                                         <img src="images/user2.jpg" class="rounded-circle mr-2" alt="image">
                                         <span>Sarah Taylor</span>
                                     </div>
-                                    <h3><a routerLink="/single-course" class="d-inline-block">Structured French lessons and preparation for exams/certifications (DELF, IB, GCSE, etc.)</a></h3>
-                                    <a routerLink="/contact" class="default-btn"><span class="label">Request a Quote</span></a>
+                                    <h3><a routerLink="/single-course" class="d-inline-block">{{ lang.t('coursesChildrenCard1Title') }}</a></h3>
+                                    <a routerLink="/contact" class="default-btn"><span class="label">{{ lang.t('coursesRequestQuote') }}</span></a>
                                 </div>
                             </div>
                         </div>
@@ -277,7 +269,7 @@
                                 <div class="courses-image">
                                     <a routerLink="/single-course" class="d-block"><img src="images/courses/courses4.jpg" alt="image"></a>
                                     <div class="courses-tag">
-                                        <a routerLink="/courses-3-columns-style-1" class="d-block">Children and Teenagers</a>
+                                        <a routerLink="/courses-3-columns-style-1" class="d-block">{{ lang.t('coursesCatChildren') }}</a>
                                     </div>
                                 </div>
                                 <div class="courses-content">
@@ -285,8 +277,8 @@
                                         <img src="images/user4.jpg" class="rounded-circle mr-2" alt="image">
                                         <span>Liam King</span>
                                     </div>
-                                    <h3><a routerLink="/single-course" class="d-inline-block">French Fun Clubs to explore French through playful and interactive activities</a></h3>
-                                    <a routerLink="/contact" class="default-btn"><span class="label">Request a Quote</span></a>
+                                    <h3><a routerLink="/single-course" class="d-inline-block">{{ lang.t('coursesChildrenCard2Title') }}</a></h3>
+                                    <a routerLink="/contact" class="default-btn"><span class="label">{{ lang.t('coursesRequestQuote') }}</span></a>
                                 </div>
                             </div>
                         </div>
@@ -295,7 +287,7 @@
                                 <div class="courses-image">
                                     <a routerLink="/single-course" class="d-block"><img src="images/courses/courses1.jpg" alt="image"></a>
                                     <div class="courses-tag">
-                                        <a routerLink="/courses-3-columns-style-1" class="d-block">Children and Teenagers</a>
+                                        <a routerLink="/courses-3-columns-style-1" class="d-block">{{ lang.t('coursesCatChildren') }}</a>
                                     </div>
                                 </div>
                                 <div class="courses-content">
@@ -303,8 +295,8 @@
                                         <img src="images/user1.jpg" class="rounded-circle mr-2" alt="image">
                                         <span>Steven Smith</span>
                                     </div>
-                                    <h3><a routerLink="/single-course" class="d-inline-block">Academic support from kindergarten to high school, for students enrolled in French schools or wanting to stay aligned with the French national curriculum</a></h3>
-                                    <a routerLink="/contact" class="default-btn"><span class="label">Request a Quote</span></a>
+                                    <h3><a routerLink="/single-course" class="d-inline-block">{{ lang.t('coursesChildrenCard3Title') }}</a></h3>
+                                    <a routerLink="/contact" class="default-btn"><span class="label">{{ lang.t('coursesRequestQuote') }}</span></a>
                                 </div>
                             </div>
                         </div>
@@ -320,7 +312,7 @@
                                 <div class="courses-image">
                                     <a routerLink="/single-course" class="d-block"><img src="images/courses/courses2.jpg" alt="image"></a>
                                     <div class="courses-tag">
-                                        <a routerLink="/courses-3-columns-style-1" class="d-block">ELF / Certification Preparation</a>
+                                        <a routerLink="/courses-3-columns-style-1" class="d-block">{{ lang.t('coursesDelfCat') }}</a>
                                     </div>
                                 </div>
                                 <div class="courses-content">
@@ -328,8 +320,8 @@
                                         <img src="images/user2.jpg" class="rounded-circle mr-2" alt="image">
                                         <span>Sarah Taylor</span>
                                     </div>
-                                    <h3><a routerLink="/single-course" class="d-inline-block">Comprehensive ELF and certification preparation pathway</a></h3>
-                                    <a routerLink="/contact" class="default-btn"><span class="label">Request a Quote</span></a>
+                                    <h3><a routerLink="/single-course" class="d-inline-block">{{ lang.t('coursesDelfCard1Title') }}</a></h3>
+                                    <a routerLink="/contact" class="default-btn"><span class="label">{{ lang.t('coursesRequestQuote') }}</span></a>
                                 </div>
                             </div>
                         </div>
@@ -341,91 +333,92 @@
                 <div class="pane">
                     <div class="single-courses-box mb-25">
                         <div class="courses-content">
-                            <h3>Our Programs - At a Glance</h3>
+                            <h3>{{ lang.t('coursesGlanceTitle') }}</h3>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>Audience</th>
-                                            <th>Program</th>
-                                            <th>Key Benefits</th>
+                                            <th>{{ lang.t('coursesTableAudience') }}</th>
+                                            <th>{{ lang.t('coursesTableProgram') }}</th>
+                                            <th>{{ lang.t('coursesTableKeyBenefits') }}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><strong>Children &amp; Teenagers</strong></td>
-                                            <td>Structured French Courses</td>
-                                            <td>Build strong oral &amp; written skills step by step</td>
+                                            <td><strong>{{ lang.t('coursesTableChildrenAudience') }}</strong></td>
+                                            <td>{{ lang.t('coursesTableChildrenProg1') }}</td>
+                                            <td>{{ lang.t('coursesTableChildrenBen1') }}</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>Exam &amp; Certification Prep</td>
-                                            <td>DELF, IB, GCSE - succeed with confidence</td>
+                                            <td>{{ lang.t('coursesTableChildrenProg2') }}</td>
+                                            <td>{{ lang.t('coursesTableChildrenBen2') }}</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>Tutoring &amp; Academic Support</td>
-                                            <td>K-12 support for French school students or French curriculum learners</td>
+                                            <td>{{ lang.t('coursesTableChildrenProg3') }}</td>
+                                            <td>{{ lang.t('coursesTableChildrenBen3') }}</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>Fun Clubs &amp; Interactive Activities</td>
-                                            <td>Make learning French dynamic, fun, and engaging</td>
+                                            <td>{{ lang.t('coursesTableChildrenProg4') }}</td>
+                                            <td>{{ lang.t('coursesTableChildrenBen4') }}</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>Language Immersion</td>
-                                            <td>Daily practice through workshops, games, and activities</td>
+                                            <td>{{ lang.t('coursesTableChildrenProg5') }}</td>
+                                            <td>{{ lang.t('coursesTableChildrenBen5') }}</td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Adults</strong></td>
-                                            <td>Conversational French</td>
-                                            <td>Gain confidence and fluency for everyday communication</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td>General French Courses</td>
-                                            <td>Progress at your pace (CEFR A1-C2)</td>
+                                            <td><strong>{{ lang.t('coursesTableAdultsAudience') }}</strong></td>
+                                            <td>{{ lang.t('coursesTableAdultsProg1') }}</td>
+                                            <td>{{ lang.t('coursesTableAdultsBen1') }}</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>Certification Preparation</td>
-                                            <td>DELF, TEF, TCF for study, career, or relocation goals</td>
+                                            <td>{{ lang.t('coursesTableAdultsProg2') }}</td>
+                                            <td>{{ lang.t('coursesTableAdultsBen2') }}</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>Personalized Courses</td>
-                                            <td>Tailored programs to meet specific objectives</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Companies</strong></td>
-                                            <td>Business French</td>
-                                            <td>Collaborate effectively with Francophone Africa partners</td>
+                                            <td>{{ lang.t('coursesTableAdultsProg3') }}</td>
+                                            <td>{{ lang.t('coursesTableAdultsBen3') }}</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>French for Meetings &amp; Negotiations</td>
-                                            <td>Build the right vocabulary and professional skills</td>
+                                            <td>{{ lang.t('coursesTableAdultsProg4') }}</td>
+                                            <td>{{ lang.t('coursesTableAdultsBen4') }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>{{ lang.t('coursesTableCompaniesAudience') }}</strong></td>
+                                            <td>{{ lang.t('coursesTableCompaniesProg1') }}</td>
+                                            <td>{{ lang.t('coursesTableCompaniesBen1') }}</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>French for Business Travel</td>
-                                            <td>Practical training for assignments &amp; trips in Francophone Africa</td>
+                                            <td>{{ lang.t('coursesTableCompaniesProg2') }}</td>
+                                            <td>{{ lang.t('coursesTableCompaniesBen2') }}</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>Custom Programs</td>
-                                            <td>Designed for your industry and team needs</td>
+                                            <td>{{ lang.t('coursesTableCompaniesProg3') }}</td>
+                                            <td>{{ lang.t('coursesTableCompaniesBen3') }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>{{ lang.t('coursesTableCompaniesProg4') }}</td>
+                                            <td>{{ lang.t('coursesTableCompaniesBen4') }}</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
 
-                            <h3>Training Formats:</h3>
+                            <h3>{{ lang.t('coursesFormatsHeading') }}</h3>
                             <ul>
-                                @for (format of trainingFormats; track format) {
-                                    <li>{{ format }}</li>
-                                }
+                                <li>{{ lang.t('coursesFormatsLi1') }}</li>
+                                <li>{{ lang.t('coursesFormatsLi2') }}</li>
+                                <li>{{ lang.t('coursesFormatsLi3') }}</li>
+                                <li>{{ lang.t('coursesFormatsLi4') }}</li>
                             </ul>
                         </div>
                     </div>

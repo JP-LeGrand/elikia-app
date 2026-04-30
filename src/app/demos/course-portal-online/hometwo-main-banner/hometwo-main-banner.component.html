@@ -9,13 +9,9 @@
                     <div class="d-table-cell">
                         <div class="container">
                             <div class="main-banner-content">
-                                <span class="sub-title">ELIKIA French4All</span>
-                                <h1>ELIKIA French4All</h1>
-                                <p>
-                                    Your reference center for French learning
-                                    and academic success in the French school
-                                    system
-                                </p>
+                                <span class="sub-title">{{ lang.t('bannerSubTitle') }}</span>
+                                <h1>{{ lang.t('bannerTitle') }}</h1>
+                                <p>{{ lang.t('bannerDescription') }}</p>
                                 <div class="btn-box">
                                     <a
                                         routerLink="/about-style-1"
@@ -23,7 +19,7 @@
                                         ><i
                                             class="bx bx-move-horizontal icon-arrow before"
                                         ></i
-                                        ><span class="label">More Info</span
+                                        ><span class="label">{{ lang.t('bannerMoreInfo') }}</span
                                         ><i
                                             class="bx bx-move-horizontal icon-arrow after"
                                         ></i
@@ -31,7 +27,7 @@
                                     <a
                                         routerLink="/contact"
                                         class="optional-btn"
-                                        >Contact Us</a
+                                        >{{ lang.t('bannerContactUs') }}</a
                                     >
                                 </div>
                             </div>

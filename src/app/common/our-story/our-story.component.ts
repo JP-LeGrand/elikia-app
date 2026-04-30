@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../language/language.service';
 
 @Component({
     selector: 'app-our-story',
@@ -6,4 +7,8 @@ import { Component } from '@angular/core';
     templateUrl: './our-story.component.html',
     styleUrls: ['./our-story.component.scss']
 })
-export class OurStoryComponent {}
+export class OurStoryComponent {
+
+    readonly lang = inject(LanguageService);
+
+}

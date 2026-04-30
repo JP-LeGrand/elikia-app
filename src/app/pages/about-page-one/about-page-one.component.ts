@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ThemeCustomizerService } from '../../common/theme-customizer/theme-customizer.service';
 import { HeaderStyleTwoComponent } from '../../common/header-style-two/header-style-two.component';
 import { BecomeInstructorPartnerComponent } from '../../common/become-instructor-partner/become-instructor-partner.component';
@@ -10,6 +10,7 @@ import { FunfactsComponent } from '../../common/funfacts/funfacts.component';
 import { OurStoryComponent } from '../../common/our-story/our-story.component';
 import { OurMissionComponent } from '../../common/our-mission/our-mission.component';
 import { RouterLink } from '@angular/router';
+import { LanguageService } from '../../common/language/language.service';
 
 @Component({
     selector: 'app-about-page-one',
@@ -18,6 +19,8 @@ import { RouterLink } from '@angular/router';
     styleUrls: ['./about-page-one.component.scss']
 })
 export class AboutPageOneComponent {
+
+    readonly lang = inject(LanguageService);
 
     constructor(
         public themeService: ThemeCustomizerService
