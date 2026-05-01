@@ -191,11 +191,7 @@ export const en = {
     coursesChildrenCard2Title: 'French Fun Clubs to explore French through playful and interactive activities',
     coursesChildrenCard3Title: 'Academic support from kindergarten to high school, for students enrolled in French schools or wanting to stay aligned with the French national curriculum',
 
-    // Tab5 – DELF card
-    coursesDelfCat: 'DELF / Certification Preparation',
-    coursesDelfCard1Title: 'Comprehensive DELF and certification preparation pathway',
-
-    // Tab6 – Programs at a glance table
+    // Programs at a glance table
     coursesGlanceTitle: 'Our Programs - At a Glance',
     coursesTableAudience: 'Audience',
     coursesTableProgram: 'Program',

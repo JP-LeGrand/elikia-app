@@ -9,22 +9,7 @@ import { HeaderStyleTwoComponent } from "../../common/header-style-two/header-st
 type ProgramCategory =
     | 'Adults'
     | 'Companies and Professionals'
-    | 'Children and Teenagers'
-    | 'DELF / Certification Preparation';
-
-interface ProgramItem {
-    image: string;
-    category: ProgramCategory;
-    authorImage: string;
-    authorName: string;
-    title: string;
-    rating: number;
-    ratingCount: number;
-    students: number;
-    lessons: number;
-    price: string;
-    oldPrice?: string;
-}
+    | 'Children and Teenagers';
 
 interface ProgramTab {
     id: string;
@@ -48,8 +33,6 @@ export class CoursesGsocThreePageComponent implements OnInit, OnDestroy {
         tab2: 'coursesTabAdults',
         tab3: 'coursesTabCompanies',
         tab4: 'coursesTabChildren',
-        tab5: 'coursesTabDelf',
-        tab6: 'coursesTabFormats',
     };
 
     tabLabel(id: string): string {
@@ -98,15 +81,6 @@ export class CoursesGsocThreePageComponent implements OnInit, OnDestroy {
             label: 'Children and Teenagers',
             category: 'Children and Teenagers'
         },
-        {
-            id: 'tab5',
-            label: 'DELF / Certification Preparation',
-            category: 'DELF / Certification Preparation'
-        },
-        {
-            id: 'tab6',
-            label: 'Training Formats'
-        }
     ];
 
     readonly trainingFormats: string[] = [
@@ -116,134 +90,17 @@ export class CoursesGsocThreePageComponent implements OnInit, OnDestroy {
         'Programs for children, adults, and corporate teams'
     ];
 
-    readonly programs: ProgramItem[] = [
-        {
-            image: 'images/courses/courses1.jpg',
-            category: 'Adults',
-            authorImage: 'images/user1.jpg',
-            authorName: 'Steven Smith',
-            title: 'Conversational French courses to build confidence and fluency',
-            rating: 5,
-            ratingCount: 1,
-            students: 10,
-            lessons: 6,
-            price: 'Free'
-        },
-        {
-            image: 'images/courses/courses2.jpg',
-            category: 'Children and Teenagers',
-            authorImage: 'images/user2.jpg',
-            authorName: 'Sarah Taylor',
-            title: 'Structured French lessons and preparation for exams/certifications (DELF, IB, GCSE, etc.)',
-            rating: 4.5,
-            ratingCount: 2,
-            students: 15,
-            lessons: 10,
-            price: '$250'
-        },
-        {
-            image: 'images/courses/courses3.jpg',
-            category: 'Companies and Professionals',
-            authorImage: 'images/user3.jpg',
-            authorName: 'James Anderson',
-            title: 'Tailored French language training for businesses and professionals dealing with Francophone Africa',
-            rating: 4,
-            ratingCount: 1,
-            students: 5,
-            lessons: 5,
-            price: '$150'
-        },
-        {
-            image: 'images/courses/courses4.jpg',
-            category: 'Children and Teenagers',
-            authorImage: 'images/user4.jpg',
-            authorName: 'Liam King',
-            title: 'French Fun Clubs to explore French through playful and interactive activities',
-            rating: 5,
-            ratingCount: 1,
-            students: 10,
-            lessons: 6,
-            price: '$195',
-            oldPrice: '$200'
-        },
-        {
-            image: 'images/courses/courses5.jpg',
-            category: 'Companies and Professionals',
-            authorImage: 'images/user5.jpg',
-            authorName: "Lina D'Souza",
-            title: 'Courses designed to meet specific team or sector needs',
-            rating: 5,
-            ratingCount: 1,
-            students: 10,
-            lessons: 6,
-            price: '$178'
-        },
-        {
-            image: 'images/courses/courses6.jpg',
-            category: 'Adults',
-            authorImage: 'images/user6.jpg',
-            authorName: 'David Warner',
-            title: 'Preparation for official certifications (DELF, TEF, TCF)',
-            rating: 5,
-            ratingCount: 1,
-            students: 10,
-            lessons: 6,
-            price: '$500'
-        },
-        {
-            image: 'images/courses/courses1.jpg',
-            category: 'Children and Teenagers',
-            authorImage: 'images/user1.jpg',
-            authorName: 'Steven Smith',
-            title: 'Academic support from kindergarten to high school, for students enrolled in French schools or wanting to stay aligned with the French national curriculum',
-            rating: 5,
-            ratingCount: 1,
-            students: 10,
-            lessons: 6,
-            price: 'Free'
-        },
-        {
-            image: 'images/courses/courses2.jpg',
-            category: 'DELF / Certification Preparation',
-            authorImage: 'images/user2.jpg',
-            authorName: 'Sarah Taylor',
-            title: 'Comprehensive DELF and certification preparation pathway',
-            rating: 4.5,
-            ratingCount: 2,
-            students: 15,
-            lessons: 10,
-            price: '$250'
-        },
-        {
-            image: 'images/courses/courses3.jpg',
-            category: 'Companies and Professionals',
-            authorImage: 'images/user3.jpg',
-            authorName: 'James Anderson',
-            title: 'On-site training in Johannesburg and Pretoria or online',
-            rating: 4,
-            ratingCount: 1,
-            students: 5,
-            lessons: 5,
-            price: '$150'
-        }
-    ];
+    readonly tabCounts: Record<string, number> = {
+        tab1: 8,
+        tab2: 2,
+        tab3: 3,
+        tab4: 3,
+    };
 
-    get filteredPrograms(): ProgramItem[] {
-        const selectedTab = this.tabs.find((tab) => tab.id === this.currentTab);
-        if (!selectedTab || !selectedTab.category) {
-            return this.programs;
-        }
-        return this.programs.filter((program) => program.category === selectedTab.category);
-    }
+    get filteredPrograms() { return []; }
 
     getTabCount(tab: ProgramTab): number {
-        if (tab.id === 'tab6') {
-            return this.trainingFormats.length;
-        }
-        if (!tab.category) {
-            return this.programs.length;
-        }
-        return this.programs.filter((program) => program.category === tab.category).length;
+        return this.tabCounts[tab.id] ?? 0;
     }
 
     getStarIcons(rating: number): Array<'full' | 'half' | 'empty'> {

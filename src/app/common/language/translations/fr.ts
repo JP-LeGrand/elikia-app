@@ -192,11 +192,7 @@ export const fr: Record<TranslationKeys, string> = {
     coursesChildrenCard2Title: 'French Fun Clubs pour découvrir le français à travers des activités ludiques et interactives',
     coursesChildrenCard3Title: 'Soutien scolaire, de la maternelle à la Terminale, pour les élèves inscrits dans des écoles françaises ou souhaitant rester à jour avec le programme de l’Éducation nationale française',
 
-    // Tab5 – DELF card
-    coursesDelfCat: 'DELF / Préparation aux certifications',
-    coursesDelfCard1Title: 'Parcours complet de préparation au DELF et aux certifications',
-
-    // Tab6 – Programs at a glance table
+    // Programs at a glance table
     coursesGlanceTitle: "Nos Programmes – D'un coup d'œil",
     coursesTableAudience: 'Public',
     coursesTableProgram: 'Programme',
