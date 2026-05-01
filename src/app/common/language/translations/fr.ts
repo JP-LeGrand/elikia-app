@@ -252,4 +252,22 @@ export const fr: Record<TranslationKeys, string> = {
     partnerButtonLabel: 'Nous contacter',
     partnersTrustTitle: 'Ils nous font confiance',
     testimonialsHeading: 'Témoignages',
+
+    // Contact page
+    contactPageTitle: 'Contactez-nous',
+    contactBreadcrumbHome: 'Accueil',
+    contactBreadcrumbContact: 'Contact',
+    contactEmailBoxTitle: 'Par e-mail',
+    contactLocationBoxTitle: 'Notre adresse',
+    contactLocationAddress: '2750 Quadra Street Victoria Road, New York, États-Unis',
+    contactCallBoxTitle: 'Par téléphone',
+    contactSectionSubTitle: 'Contactez-nous',
+    contactSectionTitle: 'Envoyez-nous un message',
+    contactSectionDescription: 'Vous avez une question ou souhaitez en savoir plus sur nos programmes ? Remplissez le formulaire et nous vous répondrons rapidement.',
+    contactFormNamePlaceholder: 'Votre nom',
+    contactFormEmailPlaceholder: 'Votre adresse e-mail',
+    contactFormPhonePlaceholder: 'Votre numéro de téléphone',
+    contactFormSubjectPlaceholder: 'Votre sujet',
+    contactFormMessagePlaceholder: 'Votre message...',
+    contactFormSendButton: 'Envoyer le message',
 };

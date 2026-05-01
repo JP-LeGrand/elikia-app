@@ -251,6 +251,24 @@ export const en = {
     partnerButtonLabel: 'Contact Us',
     partnersTrustTitle: 'They Trust Us',
     testimonialsHeading: 'Testimonials',
+
+    // Contact page
+    contactPageTitle: 'Contact Us',
+    contactBreadcrumbHome: 'Home',
+    contactBreadcrumbContact: 'Contact',
+    contactEmailBoxTitle: 'Email Here',
+    contactLocationBoxTitle: 'Location Here',
+    contactLocationAddress: '2750 Quadra Street Victoria Road, New York, United States',
+    contactCallBoxTitle: 'Call Here',
+    contactSectionSubTitle: 'Contact Us',
+    contactSectionTitle: 'Drop us a Message for any Query',
+    contactSectionDescription: 'Have a question or want to know more about our programs? Fill in the form and we will get back to you shortly.',
+    contactFormNamePlaceholder: 'Your name',
+    contactFormEmailPlaceholder: 'Your email address',
+    contactFormPhonePlaceholder: 'Your phone number',
+    contactFormSubjectPlaceholder: 'Your subject',
+    contactFormMessagePlaceholder: 'Your message...',
+    contactFormSendButton: 'Send Message',
 } as const;
 
 export type TranslationKeys = keyof typeof en;
