@@ -2,6 +2,9 @@
     class="testimonials-slides"
     [class.dark-testimonials-slides]="themeService.isDark()"
 >
+    <div class="section-title pt-100">
+        <h2>{{ lang.t('testimonialsHeading') }}</h2>
+    </div>
     <div class="testimonials-notice">
         <p>{{ noticeText }}</p>
     </div>
@@ -11,7 +14,6 @@
                 <h3 class="testimonial-title">{{ testimonial.title }}</h3>
                 <p>{{ testimonial.text }}</p>
                 <div class="info">
-                    <img [src]="testimonial.image" class="shadow rounded-circle" alt="testimonial image">
                     <h3>{{ testimonial.name }}</h3>
                     <span>{{ testimonial.role }}</span>
                 </div>

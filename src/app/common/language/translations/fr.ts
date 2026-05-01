@@ -251,4 +251,5 @@ export const fr: Record<TranslationKeys, string> = {
     partnerDescription: "Rejoignez notre réseau et collaborez avec nous pour apporter l'éducation en français à plus d'apprenants",
     partnerButtonLabel: 'Nous contacter',
     partnersTrustTitle: 'Ils nous font confiance',
+    testimonialsHeading: 'Témoignages',
 };
