@@ -21,7 +21,6 @@ export const fr: Record<TranslationKeys, string> = {
     bannerContactUs: 'Contactez-nous',
 
     // About section
-    aboutSubTitle: 'À propos',
     aboutHeading: "Plus de 10 ans d'expérience dans l'enseignement du français pour enfants, adultes et professionnels.",
     aboutLi1: 'Cours de français pour enfants, adolescents, adultes et professionnels',
     aboutLi2: "Cours privés et soutien scolaire personnalisé pour les étudiants de l'école française",
@@ -235,7 +234,7 @@ export const fr: Record<TranslationKeys, string> = {
     // Training formats section heading (tab6)
     coursesFormatsHeading: 'Formats de formation :',
 
-    // Become Instructor Partner section
+  // Become Instructor Partner section
     delfTitle: 'Préparation aux certifications',
     delfLi1: 'Préparation au DELF, DALF, TEF et TCF',
     delfLi2: "Cours axés sur l'oral et l'écrit pour enfants, adolescents et adultes",

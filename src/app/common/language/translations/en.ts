@@ -19,7 +19,6 @@ export const en = {
     bannerContactUs: 'Contact Us',
 
     // About section
-    aboutSubTitle: 'About Us',
     aboutHeading: '10+ years of experience empowering learners and professionals.',
     aboutLi1: 'French courses for children, teenagers, adults, and professionals',
     aboutLi2: 'Private tutoring and academic support for students in the French school system.',
