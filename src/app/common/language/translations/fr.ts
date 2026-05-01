@@ -40,7 +40,7 @@ export const fr: Record<TranslationKeys, string> = {
     // Mission section
     missionSubTitle: 'Notre mission',
     missionTitle: 'Pourquoi nous ?',
-    missionSlide1Heading: 'ELIKIA French 4 All a fait ses preuves :',
+    missionSlide1Heading: 'ELIKIA French4All a fait ses preuves :',
     missionSlide1Li1: "Plus de 10 ans d'expérience sur le terrain.",
     missionSlide1Li2: "Plus de XXX enfants accompagnés dans l'apprentissage du français et le soutien scolaire.",
     missionSlide1Li3: 'Plus de XXX adultes et professionnels formés avec succès.',
@@ -54,7 +54,7 @@ export const fr: Record<TranslationKeys, string> = {
 
     // About page (page-one)
     aboutPageSubTitle: 'Qui sommes-nous ?',
-    aboutPageHeading: 'ELIKIA French 4 All',
+    aboutPageHeading: 'ELIKIA French4All',
     aboutPageLead: "Votre centre de référence pour l'apprentissage du français à Johannesburg, Pretoria ou en ligne.",
     aboutPageDescription: "Depuis plus de 10 ans, nous sommes au service des enfants, des adultes et des professionnels qui souhaitent développer leurs compétences en français. Notre approche pédagogique repose sur un accompagnement personnalisé, des enseignants expérimentés et des programmes adaptés aux objectifs de chaque apprenant.",
     aboutPageMissionChildrenTitle: 'Auprès des enfants et adolescents',
@@ -72,7 +72,7 @@ export const fr: Record<TranslationKeys, string> = {
     aboutPageObjective: 'Notre objectif est d’accompagner chaque apprenant vers une maîtrise du français qui lui permettra d’atteindre ses objectifs académiques, professionnels ou personnels.',
     aboutPageTeamSubTitle: 'Notre équipe',
     aboutPageTeamTitle: 'Notre équipe',
-    aboutPageTeamDescription: 'ELIKIA French 4 All s’appuie sur une équipe solide et expérimentée, composée d’une vingtaine d’intervenants spécialisés pour répondre à tous les besoins de nos apprenants.',
+    aboutPageTeamDescription: 'ELIKIA French4All s’appuie sur une équipe solide et expérimentée, composée d’une vingtaine d’intervenants spécialisés pour répondre à tous les besoins de nos apprenants.',
 
     // Our story / vision section
     storyVisionTitle: 'Notre vision',
@@ -110,7 +110,7 @@ export const fr: Record<TranslationKeys, string> = {
     coursesPageBreadcrumb: 'Programmes',
     coursesPageTitle: 'Nos Programmes',
     coursesPageSubTitle: 'Nos Programmes',
-    coursesPageDescription: "Chez ELIKIA French 4 All, chaque programme est conçu pour s'adapter à votre profil et à vos objectifs, avec une approche flexible, personnalisée et motivante.",
+    coursesPageDescription: "Chez ELIKIA French4All, chaque programme est conçu pour s'adapter à votre profil et à vos objectifs, avec une approche flexible, personnalisée et motivante.",
 
     // Tab labels
     coursesTabAll: 'Tout',

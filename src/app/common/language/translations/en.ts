@@ -38,7 +38,7 @@ export const en = {
     // Mission section
     missionSubTitle: 'Discover Mission',
     missionTitle: 'Why our platform is better',
-    missionSlide1Heading: 'ELIKIA French 4 All has a proven track record:',
+    missionSlide1Heading: 'ELIKIA French4All has a proven track record:',
     missionSlide1Li1: 'Over 10 years of hands-on experience in French language education.',
     missionSlide1Li2: 'Over XXX children supported in learning French and receiving academic tutoring.',
     missionSlide1Li3: 'Over XXX adults and professionals successfully trained.',
@@ -52,7 +52,7 @@ export const en = {
 
     // About page (page-one)
     aboutPageSubTitle: 'About Us',
-    aboutPageHeading: 'ELIKIA French 4 All',
+    aboutPageHeading: 'ELIKIA French4All',
     aboutPageLead: 'A leading French language center in Johannesburg, Pretoria, and online.',
     aboutPageDescription: "For over 10 years, we have been helping children, adults, and professionals develop their French skills. Our approach combines personalized guidance, experienced instructors, and programs tailored to each learner's goals, ensuring effective and enjoyable learning.",
     aboutPageMissionChildrenTitle: 'For Children and Teenagers',
@@ -70,7 +70,7 @@ export const en = {
     aboutPageObjective: 'We aim to guide every learner toward mastery of French, empowering them to achieve their academic, professional, and personal goals.',
     aboutPageTeamSubTitle: 'Make Connections',
     aboutPageTeamTitle: 'Our Team',
-    aboutPageTeamDescription: 'ELIKIA French 4 All relies on a strong and experienced team of around twenty specialized contributors to meet all the needs of our learners.',
+    aboutPageTeamDescription: 'ELIKIA French4All relies on a strong and experienced team of around twenty specialized contributors to meet all the needs of our learners.',
 
     // Our story / vision section
     storyVisionTitle: 'Our Vision',
@@ -109,7 +109,7 @@ export const en = {
     coursesPageBreadcrumb: 'Programs',
     coursesPageTitle: 'Our Programs',
     coursesPageSubTitle: 'Discover Programs',
-    coursesPageDescription: 'At ELIKIA French 4 All, every program is designed to match your profile and goals, with a flexible, personalized, and engaging approach.',
+    coursesPageDescription: 'At ELIKIA French4All, every program is designed to match your profile and goals, with a flexible, personalized, and engaging approach.',
 
     // Tab labels
     coursesTabAll: 'All',
