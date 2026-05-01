@@ -241,6 +241,12 @@ export const fr: Record<TranslationKeys, string> = {
     delfLi3: 'Suivi par des enseignants expérimentés et qualifiés',
     delfButtonLabel: 'Demander un devis',
 
+    // Funfacts section
+    funfactsYears: 'Ans',
+    funfactsPrograms: 'Programmes',
+    funfactsStudents: 'Étudiants',
+    funfactsInstructors: 'Enseignants experts',
+
     instructorTitle: 'Devenir enseignant',
     instructorDescription: "Choisissez parmi nos programmes et rejoignez notre équipe d'éducateurs passionnés",
     instructorButtonLabel: 'Postuler maintenant',

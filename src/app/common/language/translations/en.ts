@@ -240,6 +240,12 @@ export const en = {
     delfLi3: 'High success rate thanks to experienced and qualified French teachers',
     delfButtonLabel: 'Request a quote',
 
+    // Funfacts section
+    funfactsYears: 'Years',
+    funfactsPrograms: 'Programs',
+    funfactsStudents: 'Students',
+    funfactsInstructors: 'Expert Instructors',
+
     instructorTitle: 'Become an Instructor',
     instructorDescription: 'Choose from our programs and join our team of passionate educators',
     instructorButtonLabel: 'Apply Now',
