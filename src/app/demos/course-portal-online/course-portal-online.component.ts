@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { HeaderStyleTwoComponent } from '../../common/header-style-two/header-style-two.component';
 import { HometwoMainBannerComponent } from './hometwo-main-banner/hometwo-main-banner.component';
 import { HometwoAboutComponent } from './hometwo-about/hometwo-about.component';
@@ -15,6 +15,7 @@ import { RouterLink } from '@angular/router';
 import { LanguageCategoryComponent } from '../../common/language-category/language-category.component';
 import { BecomeInstructorPartnerComponent } from '../../common/become-instructor-partner/become-instructor-partner.component';
 import { FeedbackStyleTwoComponent } from '../../common/feedback-style-two/feedback-style-two.component';
+import { LanguageService } from '../../common/language/language.service';
 
 @Component({
     selector: 'app-course-portal-online',
@@ -32,4 +33,6 @@ import { FeedbackStyleTwoComponent } from '../../common/feedback-style-two/feedb
     templateUrl: './course-portal-online.component.html',
     styleUrl: './course-portal-online.component.scss',
 })
-export class CoursePortalOnlineComponent {}
+export class CoursePortalOnlineComponent {
+    readonly lang = inject(LanguageService);
+}

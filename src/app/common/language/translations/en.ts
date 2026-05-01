@@ -249,6 +249,7 @@ export const en = {
     partnerTitle: 'Become a Partner',
     partnerDescription: 'Join our network and collaborate with us to bring French education to more learners',
     partnerButtonLabel: 'Contact Us',
+    partnersTrustTitle: 'They Trust Us',
 } as const;
 
 export type TranslationKeys = keyof typeof en;
