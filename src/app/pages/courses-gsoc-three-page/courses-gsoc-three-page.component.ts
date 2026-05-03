@@ -115,9 +115,15 @@ export class CoursesGsocThreePageComponent implements OnInit, OnDestroy {
         return stars;
     }
 
-    switchTab(event: MouseEvent, tab: string) {
+    switchTab(event: MouseEvent, tab: string, scrollToTop = false) {
         event.preventDefault();
         this.currentTab = tab;
+        if (scrollToTop) {
+            // Ensure users land at the top only for tab1 card-driven tab switches.
+            setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 0);
+        }
     }
 
 }
