@@ -272,5 +272,5 @@ export const fr: Record<TranslationKeys, string> = {
     contactFormSendButton: 'Envoyer le message',
 
     // Footer
-    footerCopyright: 'ELikia French4All fait partie du groupe Elikia Conseils & Formations Group',
+    footerCopyright: '© ELikia French4All fait partie du groupe Elikia Conseils & Formations Group',
 };
