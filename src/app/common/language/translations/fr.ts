@@ -259,7 +259,7 @@ export const fr: Record<TranslationKeys, string> = {
     contactBreadcrumbContact: 'Contact',
     contactEmailBoxTitle: 'Par e-mail',
     contactLocationBoxTitle: 'Notre adresse',
-    contactLocationAddress: '2750 Quadra Street Victoria Road, New York, États-Unis',
+    contactLocationAddress: 'PostNet Suite 372, Private Bag X9, Benmore 2010',
     contactCallBoxTitle: 'Par téléphone',
     contactSectionSubTitle: 'Contactez-nous',
     contactSectionTitle: 'Envoyez-nous un message',
@@ -272,5 +272,16 @@ export const fr: Record<TranslationKeys, string> = {
     contactFormSendButton: 'Envoyer le message',
 
     // Footer
+    footerContactUs: 'Contactez-nous',
+    footerSupportHeading: 'Support',
+    footerSupportFaq: 'Questions fréquentes',
+    footerSupportContact: 'Contact',
+    footerSupportPrivacy: 'Politique de confidentialité',
+    footerSupportTerms: 'Conditions générales',
+    footerUsefulHeading: 'Liens rapides',
+    footerUsefulHome: 'Accueil',
+    footerUsefulAbout: 'À propos',
+    footerUsefulPrograms: 'Nos programmes',
+    footerUsefulContact: 'Contact',
     footerCopyright: '© ELikia French4All fait partie du groupe Elikia Conseils & Formations Group',
 };

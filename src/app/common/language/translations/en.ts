@@ -258,7 +258,7 @@ export const en = {
     contactBreadcrumbContact: 'Contact',
     contactEmailBoxTitle: 'Email Here',
     contactLocationBoxTitle: 'Location Here',
-    contactLocationAddress: '2750 Quadra Street Victoria Road, New York, United States',
+    contactLocationAddress: 'PostNet Suite 372, Private Bag X9, Benmore 2010',
     contactCallBoxTitle: 'Call Here',
     contactSectionSubTitle: 'Contact Us',
     contactSectionTitle: 'Drop us a Message for any Query',
@@ -271,6 +271,17 @@ export const en = {
     contactFormSendButton: 'Send Message',
 
     // Footer
+    footerContactUs: 'Contact Us',
+    footerSupportHeading: 'Support',
+    footerSupportFaq: "FAQ's",
+    footerSupportContact: 'Contact',
+    footerSupportPrivacy: 'Privacy Policy',
+    footerSupportTerms: 'Terms & Conditions',
+    footerUsefulHeading: 'Quick Links',
+    footerUsefulHome: 'Home',
+    footerUsefulAbout: 'About Us',
+    footerUsefulPrograms: 'Our Programs',
+    footerUsefulContact: 'Contact',
     footerCopyright: '© Elikia French4All is part of the Elikia Conseils & Formations Group',
 } as const;
 
