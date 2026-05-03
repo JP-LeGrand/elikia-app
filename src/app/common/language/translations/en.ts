@@ -282,7 +282,7 @@ export const en = {
     footerUsefulAbout: 'About Us',
     footerUsefulPrograms: 'Our Programs',
     footerUsefulContact: 'Contact',
-    footerCopyright: '© Elikia French4All is part of the Elikia Conseils & Formations Group',
+    footerCopyright: '© Elikia French4All is proudly owned by the Elikia Conseils & Formations Group',
 } as const;
 
 export type TranslationKeys = keyof typeof en;
