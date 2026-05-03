@@ -282,4 +282,18 @@ export const fr: Record<TranslationKeys, string> = {
     footerUsefulContact: 'Contact',
     footerUsefulTestimonials: 'Témoignages',
     footerCopyright: '© ELikia French4All fait partie du groupe Elikia Conseils & Formations Group',
-};
+
+    // FAQ section
+    faqQ1Title: 'Quelle est notre charte qualité ?',
+    faqQ1Content: 'Votre avis compte : Nous proposons uniquement les meilleurs employés, sélectionnés selon leurs compétences, leur expérience et leur mode de vie au sein d\'une famille. Votre satisfaction est notre priorité : Nos employés sont zélés quelle que soit la nature de leur mission, motivés par la récompense de la satisfaction de nos clients.',
+    faqQ2Title: 'Proposons-nous un recrutement pour les professionnels ?',
+    faqQ2Content: 'Nos professionnels passent une série de tests de sélection et de collecte de documents afin de s\'assurer qu\'ils adhèrent au modèle commercial d\'Elikia.',
+    faqQ3Title: 'Quel est le coût des services proposés par Elikia ?',
+    faqQ3Content: 'En ce qui concerne la tarification des services proposés, le prix dépend principalement de ce qui est demandé par le client. Chez Elikia, le devis est établi en fonction de vos demandes de services.',
+    faqQ4Title: 'Avec quels clients Elikia a-t-il déjà travaillé ?',
+    faqQ4Content: 'Pour consulter une partie des nombreuses entreprises avec lesquelles Elikia a travaillé, rendez-vous dans la section « Ils nous font confiance » sur le site web.',
+      faqTab1: 'Qualité',
+      faqTab2: 'Recrutement',
+      faqTab3: 'Tarification',
+      faqTab4: 'Nos Clients',
+    };

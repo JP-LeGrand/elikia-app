@@ -281,6 +281,20 @@ export const en = {
     footerUsefulContact: 'Contact',
     footerUsefulTestimonials: 'Testimonials',
     footerCopyright: '© Elikia French4All is proudly owned by the Elikia Conseils & Formations Group',
-} as const;
+
+    // FAQ section
+    faqQ1Title: 'What is our quality charter?',
+    faqQ1Content: 'What you think matters: We offer only the best blend of employees, selected based on their competences, experiences and their way of life within a family. Your view matters to us: Our employees are zealous regardless of the type of duty, they are encouraged by the reward of our client\'s satisfaction.',
+    faqQ2Title: 'Do we offer recruitment for professionals?',
+    faqQ2Content: 'Our professionals undergo a series of screening tests and documentation collection to ensure that they adhere to Elikia\'s business model.',
+    faqQ3Title: 'What is the cost of the services offered by Elikia?',
+    faqQ3Content: 'When it comes to pricing of services offered, the pricing mainly depends on what is requested by the client. Here at Elikia you are quoted according to your service requests.',
+    faqQ4Title: 'What clients has Elikia worked with before?',
+    faqQ4Content: 'In order to view a portion of the many companies Elikia has worked with, visit the \'They Trust Us\' section on the website.',
+        faqTab1: 'Quality',
+        faqTab2: 'Recruitment',
+        faqTab3: 'Pricing',
+        faqTab4: 'Our Clients',
+    } as const;
 
 export type TranslationKeys = keyof typeof en;

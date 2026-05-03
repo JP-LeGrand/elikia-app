@@ -23,68 +23,26 @@
         <div class="faq-accordion-tab">
             <ul class="nav-tabset">
                 <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab1'}">
-                    <span class="active" (click)="switchTab($event, 'tab1')">Getting Started</span>
+                    <span (click)="switchTab($event, 'tab1')">{{ lang.t('faqTab1') }}</span>
                 </li>
                 <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab2'}">
-                    <span (click)="switchTab($event, 'tab2')">Pricing & Plans</span>
+                    <span (click)="switchTab($event, 'tab2')">{{ lang.t('faqTab2') }}</span>
                 </li>
                 <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab3'}">
-                    <span (click)="switchTab($event, 'tab3')">Sales Question</span>
+                    <span (click)="switchTab($event, 'tab3')">{{ lang.t('faqTab3') }}</span>
                 </li>
                 <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab4'}">
-                    <span (click)="switchTab($event, 'tab4')">Usage Guides</span>
+                    <span (click)="switchTab($event, 'tab4')">{{ lang.t('faqTab4') }}</span>
                 </li>
             </ul>
             <div class="tabs-container">
                 @if (currentTab === 'tab1') {
                     <div class="pane">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-lg-12">
                                 <div class="faq-item">
-                                    <h3>Q: What’s the difference between college and university?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What are the different types of undergraduate degrees?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What are the different types of  graduate degrees?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: Can you work while studying in the United States?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What is distance education?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What do I need to know about mobile?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What is content marketing?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: Do I need a blog?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
+                                    <h3>Q: {{ lang.t('faqQ1Title') }}</h3>
+                                    <p><strong>A:</strong> {{ lang.t('faqQ1Content') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -93,52 +51,10 @@
                 @if (currentTab === 'tab2') {
                     <div class="pane">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-lg-12">
                                 <div class="faq-item">
-                                    <h3>Q: What is distance education?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What do I need to know about mobile?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What is content marketing?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: Do I need a blog?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What’s the difference between college and university?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What are the different types of undergraduate degrees?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What are the different types of  graduate degrees?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: Can you work while studying in the United States?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
+                                    <h3>Q: {{ lang.t('faqQ2Title') }}</h3>
+                                    <p><strong>A:</strong> {{ lang.t('faqQ2Content') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -147,52 +63,10 @@
                 @if (currentTab === 'tab3') {
                     <div class="pane">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-lg-12">
                                 <div class="faq-item">
-                                    <h3>Q: What’s the difference between college and university?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: Can you work while studying in the United States?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What is distance education?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What do I need to know about mobile?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What is content marketing?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What are the different types of undergraduate degrees?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What are the different types of  graduate degrees?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: Do I need a blog?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
+                                    <h3>Q: {{ lang.t('faqQ3Title') }}</h3>
+                                    <p><strong>A:</strong> {{ lang.t('faqQ3Content') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -201,52 +75,10 @@
                 @if (currentTab === 'tab4') {
                     <div class="pane">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-lg-12">
                                 <div class="faq-item">
-                                    <h3>Q: What’s the difference between college and university?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What are the different types of undergraduate degrees?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What are the different types of  graduate degrees?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: Can you work while studying in the United States?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What is distance education?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What do I need to know about mobile?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: What is content marketing?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="faq-item">
-                                    <h3>Q: Do I need a blog?</h3>
-                                    <p><strong>A:</strong> Colleges offer only undergraduate degrees while universities offer graduate degrees as well, but the terms are often used interchangeably.</p>
+                                    <h3>Q: {{ lang.t('faqQ4Title') }}</h3>
+                                    <p><strong>A:</strong> {{ lang.t('faqQ4Content') }}</p>
                                 </div>
                             </div>
                         </div>

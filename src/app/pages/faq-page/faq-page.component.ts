@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ThemeCustomizerService } from '../../common/theme-customizer/theme-customizer.service';
+import { LanguageService } from '../../common/language/language.service';
 import { HeaderStyleTwoComponent } from '../../common/header-style-two/header-style-two.component';
 import { BecomeInstructorPartnerComponent } from '../../common/become-instructor-partner/become-instructor-partner.component';
 import { NgClass } from '@angular/common';
@@ -13,15 +14,16 @@ import { RouterLink } from '@angular/router';
 })
 export class FaqPageComponent {
 
+    readonly lang = inject(LanguageService);
+
     constructor(
         public themeService: ThemeCustomizerService
     ) {}
 
-    // for tab click event
-    currentTab = 'tab1';
-    switchTab(event: MouseEvent, tab: string) {
-        event.preventDefault();
-        this.currentTab = tab;
-    }
+        currentTab = 'tab1';
+        switchTab(event: MouseEvent, tab: string) {
+            event.preventDefault();
+            this.currentTab = tab;
+        }
 
-}
+    }
