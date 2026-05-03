@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { BackToTopComponent } from '../back-to-top/back-to-top.component';
+import { LanguageService } from '../language/language.service';
 
 @Component({
     selector: 'app-footer',
@@ -8,4 +9,6 @@ import { BackToTopComponent } from '../back-to-top/back-to-top.component';
     templateUrl: './footer.component.html',
     styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent {}
+export class FooterComponent {
+    lang = inject(LanguageService);
+}

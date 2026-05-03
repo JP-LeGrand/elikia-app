@@ -270,4 +270,7 @@ export const fr: Record<TranslationKeys, string> = {
     contactFormSubjectPlaceholder: 'Votre sujet',
     contactFormMessagePlaceholder: 'Votre message...',
     contactFormSendButton: 'Envoyer le message',
+
+    // Footer
+    footerCopyright: 'ELikia French4All fait partie du groupe Elikia Conseils & Formations Group',
 };

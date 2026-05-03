@@ -269,6 +269,9 @@ export const en = {
     contactFormSubjectPlaceholder: 'Your subject',
     contactFormMessagePlaceholder: 'Your message...',
     contactFormSendButton: 'Send Message',
+
+    // Footer
+    footerCopyright: '© Elikia French4All is part of the Elikia Conseils & Formations Group',
 } as const;
 
 export type TranslationKeys = keyof typeof en;
