@@ -120,9 +120,6 @@ export const fr: Record<TranslationKeys, string> = {
     coursesTabDelf: 'DELF / Préparation aux certifications',
     coursesTabFormats: 'Formats de formation',
 
-    // Overview tag
-    coursesOverviewTag: "Vue d'ensemble",
-
     // Tab1 – Children overview card
     coursesChildrenOverviewTitle: 'Pour les enfants et adolescents',
     coursesChildrenOverviewDesc: "Nous accompagnons les enfants et adolescents dans l'apprentissage du français à travers des formules adaptées à leur âge, leur niveau et leurs besoins :",

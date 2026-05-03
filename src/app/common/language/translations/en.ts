@@ -119,9 +119,6 @@ export const en = {
     coursesTabDelf: 'DELF / Certification Preparation',
     coursesTabFormats: 'Training Formats',
 
-    // Overview tag
-    coursesOverviewTag: 'Overview',
-
     // Tab1 – Children overview card
     coursesChildrenOverviewTitle: 'For Children and Teenagers',
     coursesChildrenOverviewDesc: 'We guide children and teenagers in learning French through programs tailored to their age, level, and objectives:',
