@@ -2,20 +2,13 @@ import { Component, inject } from '@angular/core';
 import { HeaderStyleTwoComponent } from '../../common/header-style-two/header-style-two.component';
 import { HometwoMainBannerComponent } from './hometwo-main-banner/hometwo-main-banner.component';
 import { HometwoAboutComponent } from './hometwo-about/hometwo-about.component';
-import { CategoriesStyleOneComponent } from '../../common/categories-style-one/categories-style-one.component';
 import { FunfactsComponent } from '../../common/funfacts/funfacts.component';
-import { HometwoCoursesComponent } from './hometwo-courses/hometwo-courses.component';
 import { OurMissionComponent } from '../../common/our-mission/our-mission.component';
 import { PartnerStyleOneComponent } from '../../common/partner-style-one/partner-style-one.component';
-import { InstructorsStyleTwoComponent } from '../../common/instructors-style-two/instructors-style-two.component';
-import { StudentsFeedbackFormComponent } from '../../common/students-feedback-form/students-feedback-form.component';
-import { BlogComponent } from '../../common/blog/blog.component';
-import { WebinarCountdownComponent } from '../../common/webinar-countdown/webinar-countdown.component';
-import { RouterLink } from '@angular/router';
 import { LanguageCategoryComponent } from '../../common/language-category/language-category.component';
 import { BecomeInstructorPartnerComponent } from '../../common/become-instructor-partner/become-instructor-partner.component';
-import { FeedbackStyleTwoComponent } from '../../common/feedback-style-two/feedback-style-two.component';
 import { LanguageService } from '../../common/language/language.service';
+import { FeedbackStyleOneComponent } from "../../common/feedback-style-one/feedback-style-one.component";
 
 @Component({
     selector: 'app-course-portal-online',
@@ -28,7 +21,7 @@ import { LanguageService } from '../../common/language/language.service';
     PartnerStyleOneComponent,
     LanguageCategoryComponent,
     BecomeInstructorPartnerComponent,
-    FeedbackStyleTwoComponent
+    FeedbackStyleOneComponent
 ],
     templateUrl: './course-portal-online.component.html',
     styleUrl: './course-portal-online.component.scss',
