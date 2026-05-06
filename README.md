@@ -57,3 +57,11 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Contact Form API
+
+The Angular app now sends contact form submissions to the separate .NET API service.
+
+- Default API endpoint used by the frontend: `http://localhost:5142/api/contact`
+- Configure CORS and SMTP in the .NET API project.
+- The Angular SSR server no longer handles SMTP/email.

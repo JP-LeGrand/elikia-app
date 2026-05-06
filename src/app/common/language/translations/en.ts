@@ -266,6 +266,18 @@ export const en = {
     contactFormSubjectPlaceholder: 'Your subject',
     contactFormMessagePlaceholder: 'Your message...',
     contactFormSendButton: 'Send Message',
+    contactFormSendingButton: 'Sending...',
+    contactFormNameRequired: 'Please enter your name.',
+    contactFormEmailRequired: 'Please enter your email address.',
+    contactFormEmailInvalid: 'Please enter a valid email address.',
+    contactFormPhoneRequired: 'Please enter your phone number.',
+    contactFormPhoneInvalid: 'Please enter a valid phone number.',
+    contactFormSubjectRequired: 'Please enter a subject.',
+    contactFormMessageRequired: 'Please enter your message.',
+    contactFormMessageMinLength: 'Your message should be at least 10 characters long.',
+    contactFormSuccessMessage: 'Your message has been sent. We will get back to you shortly.',
+    contactFormErrorMessage: 'Something went wrong while sending your message. Please try again.',
+    contactFormRateLimitMessage: 'Too many requests. Please wait a few minutes and try again.',
 
     // Footer
     footerContactUs: 'Contact Us',

@@ -79,82 +79,115 @@
             <p>{{ lang.t("contactSectionDescription") }}</p>
         </div>
         <div class="contact-form">
-            <form>
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
                         <div class="form-group">
                             <input
-                                name="name"
                                 type="text"
                                 class="form-control"
                                 id="name"
+                                formControlName="name"
                                 [placeholder]="
                                     lang.t('contactFormNamePlaceholder')
                                 "
                             />
+                            @if (hasError('name', 'required')) {
+                                <div class="field-error">{{ lang.t("contactFormNameRequired") }}</div>
+                            }
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <div class="form-group">
                             <input
-                                name="email"
-                                type="text"
+                                type="email"
                                 class="form-control"
                                 id="email"
+                                formControlName="email"
                                 [placeholder]="
                                     lang.t('contactFormEmailPlaceholder')
                                 "
                             />
+                            @if (hasError('email', 'required')) {
+                                <div class="field-error">{{ lang.t("contactFormEmailRequired") }}</div>
+                            }
+                            @if (hasError('email', 'email')) {
+                                <div class="field-error">{{ lang.t("contactFormEmailInvalid") }}</div>
+                            }
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <div class="form-group">
                             <input
-                                name="number"
                                 type="text"
                                 class="form-control"
-                                id="number"
+                                id="phone"
+                                formControlName="phone"
                                 [placeholder]="
                                     lang.t('contactFormPhonePlaceholder')
                                 "
                             />
+                            @if (hasError('phone', 'required')) {
+                                <div class="field-error">{{ lang.t("contactFormPhoneRequired") }}</div>
+                            }
+                            @if (hasError('phone', 'pattern')) {
+                                <div class="field-error">{{ lang.t("contactFormPhoneInvalid") }}</div>
+                            }
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <div class="form-group">
                             <input
-                                name="subject"
                                 type="text"
                                 class="form-control"
                                 id="subject"
+                                formControlName="subject"
                                 [placeholder]="
                                     lang.t('contactFormSubjectPlaceholder')
                                 "
                             />
+                            @if (hasError('subject', 'required')) {
+                                <div class="field-error">{{ lang.t("contactFormSubjectRequired") }}</div>
+                            }
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-12">
                         <div class="form-group">
                             <textarea
-                                name="message"
                                 id="message"
                                 cols="30"
                                 rows="5"
                                 class="form-control"
+                                formControlName="message"
                                 [placeholder]="
                                     lang.t('contactFormMessagePlaceholder')
                                 "
                             ></textarea>
+                            @if (hasError('message', 'required')) {
+                                <div class="field-error">{{ lang.t("contactFormMessageRequired") }}</div>
+                            }
+                            @if (hasError('message', 'minlength')) {
+                                <div class="field-error">{{ lang.t("contactFormMessageMinLength") }}</div>
+                            }
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-12">
-                        <button type="submit" class="default-btn">
+                        <button type="submit" class="default-btn" [disabled]="isSubmitting">
                             <i class="bx bx-paper-plane icon-arrow before"></i>
                             <span class="label">{{
-                                lang.t("contactFormSendButton")
+                                isSubmitting
+                                    ? lang.t("contactFormSendingButton")
+                                    : lang.t("contactFormSendButton")
                             }}</span>
                             <i class="bx bx-paper-plane icon-arrow after"></i>
                         </button>
+                    </div>
+                    <div class="col-lg-12 col-md-12">
+                        @if (submitFeedbackKey) {
+                            <div class="form-status" [class.error]="submitFeedbackKey !== 'contactFormSuccessMessage'">
+                                {{ lang.t(submitFeedbackKey) }}
+                            </div>
+                        }
                     </div>
                 </div>
             </form>
@@ -175,5 +208,4 @@
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
     ></iframe>
-    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d359536.14502592356!2d-76.08043413946686!3d45.25029749557496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce04ff4fe494ef%3A0x26bb54f60c29f6e!2sParliament%20Hill!5e0!3m2!1sen!2sbd!4v1593691677634!5m2!1sen!2sbd"></iframe> -->
 </div>

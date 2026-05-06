@@ -267,6 +267,18 @@ export const fr: Record<TranslationKeys, string> = {
     contactFormSubjectPlaceholder: 'Votre sujet',
     contactFormMessagePlaceholder: 'Votre message...',
     contactFormSendButton: 'Envoyer le message',
+    contactFormSendingButton: 'Envoi en cours...',
+    contactFormNameRequired: 'Veuillez saisir votre nom.',
+    contactFormEmailRequired: 'Veuillez saisir votre adresse e-mail.',
+    contactFormEmailInvalid: 'Veuillez saisir une adresse e-mail valide.',
+    contactFormPhoneRequired: 'Veuillez saisir votre numéro de téléphone.',
+    contactFormPhoneInvalid: 'Veuillez saisir un numéro de téléphone valide.',
+    contactFormSubjectRequired: 'Veuillez saisir un sujet.',
+    contactFormMessageRequired: 'Veuillez saisir votre message.',
+    contactFormMessageMinLength: 'Votre message doit contenir au moins 10 caractères.',
+    contactFormSuccessMessage: 'Votre message a bien été envoyé. Nous vous répondrons rapidement.',
+    contactFormErrorMessage: 'Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.',
+    contactFormRateLimitMessage: 'Trop de tentatives. Veuillez patienter quelques minutes puis réessayer.',
 
     // Footer
     footerContactUs: 'Contactez-nous',
