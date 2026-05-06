@@ -1,6 +1,9 @@
 import nodemailer from 'nodemailer';
 import { ContactFormPayload } from './contact.types';
 
+// Netlify global is available in Netlify Function runtime (including Angular SSR via @netlify/angular-runtime)
+declare const Netlify: { env: { get(key: string): string | undefined } } | undefined;
+
 interface MailConfig {
     smtpHost: string;
     smtpPort: number;
@@ -13,8 +16,17 @@ interface MailConfig {
     subjectPrefix: string;
 }
 
+// Netlify.env.get() is the recommended way to access env vars in Netlify Functions;
+// process.env fallback supports local development via dotenv.
+function getEnvVar(name: string): string | undefined {
+    if (typeof Netlify !== 'undefined' && Netlify?.env) {
+        return Netlify.env.get(name);
+    }
+    return process.env[name];
+}
+
 function getRequiredEnvVar(name: string): string {
-    const value = process.env[name];
+    const value = getEnvVar(name);
     if (!value) {
         throw new Error(`Missing required environment variable: ${name}`);
     }
@@ -44,9 +56,9 @@ function getMailConfig(): MailConfig {
         smtpPassword,
         useImplicitTls: smtpPort === 465,
         requireStartTls: smtpPort === 587,
-        contactToEmail: process.env['CONTACT_TO_EMAIL'] || smtpUser,
-        contactFromEmail: process.env['CONTACT_FROM_EMAIL'] || smtpUser,
-        subjectPrefix: process.env['CONTACT_SUBJECT_PREFIX'] || 'Website Contact'
+        contactToEmail: getEnvVar('CONTACT_TO_EMAIL') || smtpUser,
+        contactFromEmail: getEnvVar('CONTACT_FROM_EMAIL') || smtpUser,
+        subjectPrefix: getEnvVar('CONTACT_SUBJECT_PREFIX') || 'Website Contact'
     };
 }
 

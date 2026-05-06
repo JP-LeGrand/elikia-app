@@ -63,7 +63,8 @@ export async function contactController(request: Request): Promise<Response> {
         await sendContactEmail(payload);
         return jsonResponse(200, { message: 'Message sent successfully.' });
     } catch (error) {
-        console.error('Contact form email failed:', error);
+        const err = error instanceof Error ? error : new Error(String(error));
+        console.error('Contact form email failed:', err.message, err.stack);
         return jsonResponse(500, { message: 'Unable to send message at the moment.' });
     }
 }
