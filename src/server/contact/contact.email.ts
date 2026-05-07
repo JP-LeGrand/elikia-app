@@ -43,19 +43,30 @@ function escapeHtml(text: string): string {
         .replace(/'/g, '&#39;');
 }
 
+function resolveTlsMode(port: number): { useImplicitTls: boolean; requireStartTls: boolean } {
+    if (port === 465) {
+        return { useImplicitTls: true, requireStartTls: false };
+    }
+    if (port === 587) {
+        return { useImplicitTls: false, requireStartTls: true };
+    }
+    throw new Error(`Unsupported SMTP_PORT: ${port}. Use 465 (SSL/TLS) or 587 (STARTTLS).`);
+}
+
 function getMailConfig(): MailConfig {
     const smtpHost = getRequiredEnvVar('SMTP_HOST');
     const smtpPort = Number(getRequiredEnvVar('SMTP_PORT'));
     const smtpUser = getRequiredEnvVar('SMTP_USER');
     const smtpPassword = getRequiredEnvVar('SMTP_PASSWORD');
+    const { useImplicitTls, requireStartTls } = resolveTlsMode(smtpPort);
 
     return {
         smtpHost,
         smtpPort,
         smtpUser,
         smtpPassword,
-        useImplicitTls: smtpPort === 465,
-        requireStartTls: smtpPort === 587,
+        useImplicitTls,
+        requireStartTls,
         contactToEmail: getEnvVar('CONTACT_TO_EMAIL') || smtpUser,
         contactFromEmail: getEnvVar('CONTACT_FROM_EMAIL') || smtpUser,
         subjectPrefix: getEnvVar('CONTACT_SUBJECT_PREFIX') || 'Website Contact'
