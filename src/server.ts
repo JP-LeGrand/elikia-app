@@ -1,3 +1,8 @@
+// Polyfill setImmediate for bundled environments (e.g. Netlify SSR) where it is stripped by esbuild.
+if (typeof globalThis.setImmediate === 'undefined') {
+    (globalThis as unknown as Record<string, unknown>)['setImmediate'] = (fn: () => void) => setTimeout(fn, 0);
+}
+
 import { AngularAppEngine, createRequestHandler } from '@angular/ssr';
 import { getContext } from '@netlify/angular-runtime/context.mjs';
 import dotenv from 'dotenv';
