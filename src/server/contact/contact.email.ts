@@ -72,9 +72,12 @@ function createContactTransporter(mailConfig: MailConfig) {
             user: mailConfig.smtpUser,
             pass: mailConfig.smtpPassword
         },
-        connectionTimeout: 8000,
-        greetingTimeout: 8000,
-        socketTimeout: 8000
+        tls: {
+            minVersion: 'TLSv1.2'
+        },
+        connectionTimeout: 10000,
+        greetingTimeout: 10000,
+        socketTimeout: 15000
     });
 }
 
@@ -115,4 +118,18 @@ export async function sendContactEmail(payload: ContactFormPayload): Promise<voi
         text: textBody,
         html: htmlBody
     });
+}
+
+export async function verifySmtpConnection(): Promise<{ success: boolean; host: string; port: number; error?: string; code?: string }> {
+    const mailConfig = getMailConfig();
+    const transporter = createContactTransporter(mailConfig);
+
+    try {
+        await transporter.verify();
+        return { success: true, host: mailConfig.smtpHost, port: mailConfig.smtpPort };
+    } catch (error) {
+        const err = error instanceof Error ? error : new Error(String(error));
+        const code = (error as { code?: string })?.code;
+        return { success: false, host: mailConfig.smtpHost, port: mailConfig.smtpPort, error: err.message, code: code || undefined };
+    }
 }

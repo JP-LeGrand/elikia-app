@@ -2,12 +2,16 @@ import { AngularAppEngine, createRequestHandler } from '@angular/ssr';
 import { getContext } from '@netlify/angular-runtime/context.mjs';
 import dotenv from 'dotenv';
 import { contactController } from './server/contact/contact.controller';
+import { smtpTestController } from './server/contact/smtp-test.controller';
+import { healthController } from './server/health/health.controller';
 
 dotenv.config();
 
 const angularAppEngine = new AngularAppEngine();
 const routeHandlers: Record<string, (request: Request) => Promise<Response>> = {
-    '/api/contact': contactController
+    '/api/contact': contactController,
+    '/api/health': (req) => Promise.resolve(healthController(req)),
+    '/api/smtp-test': smtpTestController
 };
 
 function resolveContext(): unknown {

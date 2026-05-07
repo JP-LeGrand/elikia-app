@@ -64,7 +64,27 @@ export async function contactController(request: Request): Promise<Response> {
         return jsonResponse(200, { message: 'Message sent successfully.' });
     } catch (error) {
         const err = error instanceof Error ? error : new Error(String(error));
-        console.error('Contact form email failed:', err.message, err.stack);
-        return jsonResponse(500, { message: 'Unable to send message at the moment.' });
+        const code = (error as { code?: string })?.code;
+        const isConfigError = err.message.startsWith('Missing required environment variable');
+
+        if (isConfigError) {
+            console.error('Contact form config error:', err.message);
+            return jsonResponse(500, {
+                message: 'Server configuration error. Check that all SMTP environment variables are set.'
+            });
+        }
+
+        console.error('Contact form SMTP error:', { code, message: err.message, stack: err.stack });
+
+        let userMessage = 'Unable to send message. SMTP connection failed.';
+        if (code === 'EAUTH') {
+            userMessage = 'Unable to send message. SMTP authentication failed — check credentials.';
+        } else if (code === 'ESOCKET' || code === 'ECONNECTION') {
+            userMessage = 'Unable to send message. Could not connect to the mail server — check SMTP_HOST and SMTP_PORT.';
+        } else if (code === 'ETIMEDOUT' || code === 'ECONNREFUSED') {
+            userMessage = 'Unable to send message. Mail server connection timed out or was refused.';
+        }
+
+        return jsonResponse(500, { message: userMessage });
     }
 }
