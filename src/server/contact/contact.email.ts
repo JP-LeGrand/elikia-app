@@ -94,15 +94,6 @@ function createContactTransporter(mailConfig: MailConfig) {
 
 export async function sendContactEmail(payload: ContactFormPayload): Promise<void> {
     const mailConfig = getMailConfig();
-    console.log('Sending contact email with config:', {
-        smtpHost: mailConfig.smtpHost,
-        smtpPort: mailConfig.smtpPort,
-        smtpUser: mailConfig.smtpUser,
-        contactToEmail: mailConfig.contactToEmail,
-        contactFromEmail: mailConfig.contactFromEmail,
-        subjectPrefix: mailConfig.subjectPrefix
-    });
-
     const transporter = createContactTransporter(mailConfig);
 
     const textBody = [
