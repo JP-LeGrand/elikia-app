@@ -2,7 +2,7 @@ declare const Netlify: { env: { get(key: string): string | undefined } } | undef
 
 const REQUIRED_ENV_VARS = ['SMTP_HOST', 'SMTP_PORT', 'SMTP_USER', 'SMTP_PASSWORD'];
 const OPTIONAL_ENV_VARS = ['CONTACT_TO_EMAIL', 'CONTACT_FROM_EMAIL', 'CONTACT_SUBJECT_PREFIX'];
-const SAFE_TO_DISPLAY = ['SMTP_HOST', 'SMTP_PORT', 'CONTACT_SUBJECT_PREFIX', 'SMTP_USER', 'SMTP_PASSWORD'];
+const SAFE_TO_DISPLAY = ['SMTP_HOST', 'SMTP_PORT', 'CONTACT_SUBJECT_PREFIX'];
 
 function getEnvVar(name: string): string | undefined {
     if (typeof Netlify !== 'undefined' && Netlify?.env) {
