@@ -41,7 +41,7 @@ export const en = {
     missionSlide1Heading: 'ELIKIA French4All has a proven track record:',
     missionSlide1Li1: 'Over 10 years of hands-on experience in French language education.',
     missionSlide1Li2: 'Over 700 children supported in learning French and receiving academic tutoring.',
-    missionSlide1Li3: 'Over 700 adults and professionals successfully trained.',
+    missionSlide1Li3: 'Over 150 adults and professionals successfully trained.',
     missionSlide1Li4: '100% success rate for our learners in exams and certifications.',
     missionSlide2Li1: 'Over 8 years of partnership with Lycée Français Jules Verne (Johannesburg and Pretoria): implementation and organization of FLE, French Passerelle, and Français + programs for students from kindergarten to middle school, including supervision of guided studies from CP to CM2.',
     missionSlide2Li2: 'Collaboration with Crawford Bryanston and Crawford Sandton: management of extracurricular French programs.',

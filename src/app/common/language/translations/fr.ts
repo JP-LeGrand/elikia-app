@@ -43,7 +43,7 @@ export const fr: Record<TranslationKeys, string> = {
     missionSlide1Heading: 'ELIKIA French4All a fait ses preuves :',
     missionSlide1Li1: "Plus de 10 ans d'expérience sur le terrain.",
     missionSlide1Li2: "Plus de 700 enfants accompagnés dans l'apprentissage du français et le soutien scolaire.",
-    missionSlide1Li3: 'Plus de 700 adultes et professionnels formés avec succès.',
+    missionSlide1Li3: 'Plus de 150 adultes et professionnels formés avec succès.',
     missionSlide1Li4: 'Taux de réussite de 100 % de nos apprenants aux examens et certifications.',
     missionSlide2Li1: "Partenariat de plus de 8 ans avec le Lycée Français Jules Verne (Johannesburg et Pretoria) : mise en place et organisation des dispositifs FLE, French Passerelle et Français +, pour les élèves de la maternelle au collège, ainsi que suivi des études dirigées du CP au CM2.",
     missionSlide2Li2: 'Collaboration avec Crawford Bryanston et Crawford Sandton : gestion de programmes périscolaires de français.',
