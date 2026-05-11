@@ -71,7 +71,7 @@ export const fr: Record<TranslationKeys, string> = {
     aboutPageMissionSchoolsLi1: 'Mettre à disposition des écoles des professeurs de FLE (Français Langue Étrangère) pour les élèves du CP à la Terminale.',
     aboutPageMissionSchoolsLi2: 'Organiser des activités ludiques et interactives d\'initiation au français pour les programmes périscolaires.',
     aboutPageObjective: 'Notre objectif est d’accompagner chaque apprenant vers une maîtrise du français qui lui permettra d’atteindre ses objectifs académiques, professionnels ou personnels.',
-    aboutPageTeamSubTitle: 'Notre équipe',
+    // aboutPageTeamSubTitle: 'Notre équipe',
     aboutPageTeamTitle: 'Notre équipe',
     aboutPageTeamDescription: 'ELIKIA French4All s’appuie sur une équipe solide et expérimentée, composée d’une vingtaine d’intervenants spécialisés pour répondre à tous les besoins de nos apprenants.',
 

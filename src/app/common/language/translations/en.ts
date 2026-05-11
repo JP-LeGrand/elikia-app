@@ -70,7 +70,7 @@ export const en = {
     aboutPageMissionSchoolsLi1: 'Provide schools with qualified FLE (French as a Foreign Language) teachers for students from Grade 1 to Grade 12.',
     aboutPageMissionSchoolsLi2: 'Organise fun and interactive French language activities for extracurricular programmes.',
     aboutPageObjective: 'We aim to guide every learner toward mastery of French, empowering them to achieve their academic, professional, and personal goals.',
-    aboutPageTeamSubTitle: 'Make Connections',
+    // aboutPageTeamSubTitle: 'Make Connections',
     aboutPageTeamTitle: 'Our Team',
     aboutPageTeamDescription: 'ELIKIA French4All relies on a strong and experienced team of around twenty specialized contributors to meet all the needs of our learners.',
 
