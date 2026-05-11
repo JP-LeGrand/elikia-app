@@ -294,7 +294,7 @@ export const fr: Record<TranslationKeys, string> = {
     footerUsefulPrograms: 'Nos programmes',
     footerUsefulContact: 'Contact',
     footerUsefulTestimonials: 'Témoignages',
-    footerCopyright: '© ELikia French4All fait partie du groupe Elikia Conseils & Formations Group',
+    footerCopyright: '© ELikia French4All fait partie du groupe Elikia Conseils & Formations',
 
     // FAQ section
     faqQ1Title: 'Quelle est notre charte qualité ?',
