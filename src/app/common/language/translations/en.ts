@@ -36,7 +36,7 @@ export const en = {
     programsCertification: 'DELF / Certification Preparation',
 
     // Mission section
-    missionSubTitle: 'Discover Mission',
+    missionSubTitle: 'Our mission',
     missionTitle: 'Why our platform is better',
     missionSlide1Heading: 'ELIKIA French4All has a proven track record:',
     missionSlide1Li1: 'Over 10 years of hands-on experience in French language education.',
