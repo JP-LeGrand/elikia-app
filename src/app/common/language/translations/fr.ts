@@ -257,7 +257,7 @@ export const fr: Record<TranslationKeys, string> = {
     contactBreadcrumbContact: 'Contact',
     contactEmailBoxTitle: 'Par e-mail',
     contactLocationBoxTitle: 'Notre adresse',
-    contactLocationAddress: 'PostNet Suite 372, Private Bag X9, Benmore 2010',
+    contactLocationAddress: 'Johannesbourg, Afrique du Sud',
     contactCallBoxTitle: 'Par téléphone',
     contactSectionSubTitle: 'Contactez-nous',
     contactSectionTitle: 'Envoyez-nous un message',

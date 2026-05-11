@@ -257,7 +257,7 @@ export const en = {
     contactBreadcrumbContact: 'Contact',
     contactEmailBoxTitle: 'Email Here',
     contactLocationBoxTitle: 'Location Here',
-    contactLocationAddress: 'PostNet Suite 372, Private Bag X9, Benmore 2010',
+    contactLocationAddress: 'Johannesburg, South Africa',
     contactCallBoxTitle: 'Call Here',
     contactSectionSubTitle: 'Contact Us',
     contactSectionTitle: 'Drop us a Message for any Query',
