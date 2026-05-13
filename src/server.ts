@@ -7,6 +7,21 @@ import { healthController } from './server/health/health.controller';
 
 dotenv.config();
 
+const immediateApi = globalThis as typeof globalThis & {
+    setImmediate?: typeof setImmediate;
+    clearImmediate?: typeof clearImmediate;
+};
+
+if (typeof immediateApi.setImmediate !== 'function') {
+    immediateApi.setImmediate = ((callback: (...args: unknown[]) => void, ...args: unknown[]) =>
+        setTimeout(callback, 0, ...args)) as unknown as typeof setImmediate;
+}
+
+if (typeof immediateApi.clearImmediate !== 'function') {
+    immediateApi.clearImmediate = ((handle: ReturnType<typeof setTimeout>) =>
+        clearTimeout(handle)) as unknown as typeof clearImmediate;
+}
+
 const angularAppEngine = new AngularAppEngine();
 const routeHandlers: Record<string, (request: Request) => Promise<Response>> = {
     '/api/contact': contactController,
