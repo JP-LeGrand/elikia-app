@@ -86,9 +86,9 @@ function createContactTransporter(mailConfig: MailConfig) {
         tls: {
             minVersion: 'TLSv1.2'
         },
-        connectionTimeout: 10000,
-        greetingTimeout: 10000,
-        socketTimeout: 15000
+        connectionTimeout: 5000,
+        greetingTimeout: 5000,
+        socketTimeout: 7000
     });
 }
 

@@ -3,7 +3,33 @@ import { validateContactPayload } from './contact.validation';
 
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 const RATE_LIMIT_MAX_REQUESTS = 5;
+const EMAIL_SEND_TIMEOUT_MS = 8000;
 const rateLimitStore = new Map<string, number[]>();
+
+class EmailSendTimeoutError extends Error {
+    constructor(message: string) {
+        super(message);
+        this.name = 'EmailSendTimeoutError';
+    }
+}
+
+async function withEmailTimeout<T>(promise: Promise<T>, timeoutMs: number): Promise<T> {
+    return new Promise<T>((resolve, reject) => {
+        const timeoutHandle = setTimeout(() => {
+            reject(new EmailSendTimeoutError(`Email send timed out after ${timeoutMs}ms`));
+        }, timeoutMs);
+
+        promise
+            .then((value) => {
+                clearTimeout(timeoutHandle);
+                resolve(value);
+            })
+            .catch((error) => {
+                clearTimeout(timeoutHandle);
+                reject(error);
+            });
+    });
+}
 
 function jsonResponse(status: number, payload: unknown): Response {
     return new Response(JSON.stringify(payload), {
@@ -60,12 +86,13 @@ export async function contactController(request: Request): Promise<Response> {
     }
 
     try {
-        await sendContactEmail(payload);
+        await withEmailTimeout(sendContactEmail(payload), EMAIL_SEND_TIMEOUT_MS);
         return jsonResponse(200, { message: 'Message sent successfully.' });
     } catch (error) {
         const err = error instanceof Error ? error : new Error(String(error));
         const code = (error as { code?: string })?.code;
         const isConfigError = err.message.startsWith('Missing required environment variable');
+        const isTimeoutError = error instanceof EmailSendTimeoutError || code === 'ETIMEDOUT';
 
         if (isConfigError) {
             console.error('Contact form config error:', err.message);
@@ -81,10 +108,10 @@ export async function contactController(request: Request): Promise<Response> {
             userMessage = 'Unable to send message. SMTP authentication failed — check credentials.';
         } else if (code === 'ESOCKET' || code === 'ECONNECTION') {
             userMessage = 'Unable to send message. Could not connect to the mail server — check SMTP_HOST and SMTP_PORT.';
-        } else if (code === 'ETIMEDOUT' || code === 'ECONNREFUSED') {
+        } else if (isTimeoutError || code === 'ECONNREFUSED') {
             userMessage = 'Unable to send message. Mail server connection timed out or was refused.';
         }
 
-        return jsonResponse(500, { message: userMessage });
+        return jsonResponse(isTimeoutError ? 504 : 500, { message: userMessage });
     }
 }
