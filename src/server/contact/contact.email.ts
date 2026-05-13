@@ -50,7 +50,10 @@ function resolveTlsMode(port: number): { useImplicitTls: boolean; requireStartTl
     if (port === 587) {
         return { useImplicitTls: false, requireStartTls: true };
     }
-    throw new Error(`Unsupported SMTP_PORT: ${port}. Use 465 (SSL/TLS) or 587 (STARTTLS).`);
+    if (port === 25) {
+        return { useImplicitTls: false, requireStartTls: false };
+    }
+    throw new Error(`Unsupported SMTP_PORT: ${port}. Use 587 (STARTTLS, recommended), 465 (SSL/TLS), or 25 (STARTTLS/none).`);
 }
 
 function getMailConfig(): MailConfig {
@@ -59,6 +62,13 @@ function getMailConfig(): MailConfig {
     const smtpUser = getRequiredEnvVar('SMTP_USER');
     const smtpPassword = getRequiredEnvVar('SMTP_PASSWORD');
     const { useImplicitTls, requireStartTls } = resolveTlsMode(smtpPort);
+
+    if (smtpHost === 'send.one.com') {
+        console.warn(
+            '[SMTP] SMTP_HOST is "send.one.com" which is for email clients (Outlook, Thunderbird). ' +
+            'For sending from a web server, set SMTP_HOST to "mailout.one.com" in your Netlify environment variables.'
+        );
+    }
 
     return {
         smtpHost,
