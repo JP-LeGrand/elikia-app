@@ -27,9 +27,19 @@ export function healthController(_request: Request): Response {
     const allRequiredPresent = REQUIRED_ENV_VARS.every((v) => !!getEnvVar(v));
 
     const smtpHost = getEnvVar('SMTP_HOST') || '';
+    const smtpPort = getEnvVar('SMTP_PORT') || '';
     const warnings: string[] = [];
     if (smtpHost === 'send.one.com') {
-        warnings.push('SMTP_HOST is set to send.one.com which is for email clients. For sending from a web server, use mailout.one.com instead.');
+        warnings.push(
+            'SMTP_HOST is set to "send.one.com" which is for email clients only. ' +
+            'Change SMTP_HOST to "mailout.one.com" in your Netlify environment variables to send emails from this website.'
+        );
+    }
+    if (smtpPort && !['465', '587', '25'].includes(smtpPort)) {
+        warnings.push(
+            `SMTP_PORT is set to "${smtpPort}" which is not a standard one.com SMTP port. ` +
+            'Use 587 (STARTTLS, recommended), 465 (SSL/TLS), or 25 (STARTTLS/none).'
+        );
     }
 
     return new Response(

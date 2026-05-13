@@ -103,13 +103,16 @@ export async function contactController(request: Request): Promise<Response> {
 
         console.error('Contact form SMTP error:', { code, message: err.message, stack: err.stack });
 
-        let userMessage = 'Unable to send message. SMTP connection failed.';
+        let userMessage = 'Unable to send message. Please try again later.';
         if (code === 'EAUTH') {
-            userMessage = 'Unable to send message. SMTP authentication failed — check credentials.';
+            userMessage = 'Unable to send message. Please try again later.';
+            console.error('Hint: SMTP authentication failed. Verify SMTP_USER and SMTP_PASSWORD are correct and that the email account is active on one.com.');
         } else if (code === 'ESOCKET' || code === 'ECONNECTION') {
-            userMessage = 'Unable to send message. Could not connect to the mail server — check SMTP_HOST and SMTP_PORT.';
+            userMessage = 'Unable to send message. Please try again later.';
+            console.error('Hint: Could not connect to the mail server. Verify SMTP_HOST is "mailout.one.com" (not "send.one.com") and SMTP_PORT is 587 or 465.');
         } else if (isTimeoutError || code === 'ECONNREFUSED') {
-            userMessage = 'Unable to send message. Mail server connection timed out or was refused.';
+            userMessage = 'Unable to send message. Please try again later.';
+            console.error('Hint: Mail server connection timed out or was refused. If SMTP_HOST is "send.one.com", change it to "mailout.one.com".');
         }
 
         return jsonResponse(isTimeoutError ? 504 : 500, { message: userMessage });
