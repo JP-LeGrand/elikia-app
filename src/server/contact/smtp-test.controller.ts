@@ -1,15 +1,15 @@
-import { verifySmtpConnection } from './contact.email';
+import { verifyEmailConnection } from './contact.email';
 
 export async function smtpTestController(request: Request): Promise<Response> {
     if (request.method !== 'POST') {
-        return new Response(JSON.stringify({ message: 'Send a POST request to test the SMTP connection.' }), {
+        return new Response(JSON.stringify({ message: 'Send a POST request to test the email connection.' }), {
             status: 405,
             headers: { 'content-type': 'application/json; charset=utf-8' }
         });
     }
 
     try {
-        const result = await verifySmtpConnection();
+        const result = await verifyEmailConnection();
         return new Response(JSON.stringify(result), {
             status: result.success ? 200 : 502,
             headers: { 'content-type': 'application/json; charset=utf-8' }
@@ -21,7 +21,7 @@ export async function smtpTestController(request: Request): Promise<Response> {
             JSON.stringify({
                 success: false,
                 error: isConfigError
-                    ? 'Missing SMTP environment variables. Check /api/health for details.'
+                    ? 'Missing email configuration. Check /api/health for details.'
                     : err.message
             }),
             {

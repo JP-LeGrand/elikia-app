@@ -97,15 +97,17 @@ export async function contactController(request: Request): Promise<Response> {
         if (isConfigError) {
             console.error('Contact form config error:', err.message);
             return jsonResponse(500, {
-                message: 'Server configuration error. Check that all SMTP environment variables are set.'
+                message: 'Server configuration error. Check that all required email environment variables are set.'
             });
         }
 
-        console.error('Contact form SMTP error:', { code, message: err.message, stack: err.stack });
+        console.error('Contact form email error:', { code, message: err.message, stack: err.stack });
 
-        let userMessage = 'Unable to send message. SMTP connection failed.';
+        let userMessage = 'Unable to send message. Please try again later.';
         if (code === 'EAUTH') {
-            userMessage = 'Unable to send message. SMTP authentication failed — check credentials.';
+            userMessage = 'Unable to send message. Email service authentication failed — check credentials.';
+        } else if (code === 'ERESEND') {
+            userMessage = 'Unable to send message. Email delivery service returned an error.';
         } else if (code === 'ESOCKET' || code === 'ECONNECTION') {
             userMessage = 'Unable to send message. Could not connect to the mail server — check SMTP_HOST and SMTP_PORT.';
         } else if (isTimeoutError || code === 'ECONNREFUSED') {
