@@ -25,7 +25,7 @@ export const fr: Record<TranslationKeys, string> = {
     aboutLi1: 'Cours de français pour enfants, adolescents, adultes et professionnels',
     aboutLi2: "Cours privés et soutien scolaire personnalisé pour les étudiants de l'école française",
     aboutLi3: "Formations sur mesure pour entreprises et professionnels travaillant avec l\'Afrique francophone",
-    aboutLocation: 'En présentiel ou en ligne à Johannesburg et Pretoria.',
+    aboutLocation: 'En présentiel ou en ligne à Johannesburg, Pretoria et bientôt à Nairobi.',
     aboutViewPrograms: 'Voir les programmes',
 
     // Programs / language-category section

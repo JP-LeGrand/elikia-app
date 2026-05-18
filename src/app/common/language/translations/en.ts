@@ -23,7 +23,7 @@ export const en = {
     aboutLi1: 'French courses for children, teenagers, adults, and professionals',
     aboutLi2: 'Private tutoring and academic support for students in the French school system.',
     aboutLi3: 'Customized corporate training for companies and professionals working with Francophone Africa',
-    aboutLocation: 'Online or in-person in Johannesburg and Pretoria.',
+    aboutLocation: 'Online or in-person in Johannesburg, Pretoria and Nairobi (Coming Soon).',
     aboutViewPrograms: 'View Programs',
 
     // Programs / language-category section
