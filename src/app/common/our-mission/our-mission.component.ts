@@ -22,7 +22,7 @@ export class OurMissionComponent {
 		nav: true,
 		loop: true,
 		dots: false,
-		smartSpeed: 500,
+		smartSpeed: 1000,
 		autoplayHoverPause: true,
 		autoplay: true,
 		items: 1,
