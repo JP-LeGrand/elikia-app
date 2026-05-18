@@ -10,18 +10,18 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 export class PartnerStyleOneComponent {
 
 	readonly partnerLogos = [
-		'images/partners/partner1.jpg',
-		'images/partners/partner2.jpg',
-		'images/partners/partner3.png',
-		'images/partners/partner4.png',
-		'images/partners/partner5.jpeg',
-		'images/partners/partner6.jpg',
-        'images/partners/partner7.jpg',
-        'images/partners/partner8.png',
-        'images/partners/partner9.jpg',
-        'images/partners/partner10.png',
-        'images/partners/partner11.jpg',
-        'images/partners/partner12.png',
+		'https://storage.googleapis.com/elikia_buclet/images/partners/partner1.jpg',
+		'https://storage.googleapis.com/elikia_buclet/images/partners/partner2.jpg',
+		'https://storage.googleapis.com/elikia_buclet/images/partners/partner3.png',
+		'https://storage.googleapis.com/elikia_buclet/images/partners/partner4.png',
+		'https://storage.googleapis.com/elikia_buclet/images/partners/partner5.jpeg',
+		'https://storage.googleapis.com/elikia_buclet/images/partners/partner6.jpg',
+        'https://storage.googleapis.com/elikia_buclet/images/partners/partner7.jpg',
+        'https://storage.googleapis.com/elikia_buclet/images/partners/partner8.png',
+        'https://storage.googleapis.com/elikia_buclet/images/partners/partner9.jpg',
+        'https://storage.googleapis.com/elikia_buclet/images/partners/partner10.png',
+        'https://storage.googleapis.com/elikia_buclet/images/partners/partner11.jpg',
+        'https://storage.googleapis.com/elikia_buclet/images/partners/partner12.png',
 	];
 
     partnerSlides: OwlOptions = {
