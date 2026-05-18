@@ -162,7 +162,7 @@ export const en = {
     // Tab1 – Training Formats overview card
     coursesFormatsOverviewTitle: 'Training Formats',
     coursesFormatsOverviewDesc: 'Our courses are flexible and accessible:',
-    coursesFormatsLi1: 'In-person in Johannesburg and Pretoria',
+    coursesFormatsLi1: 'In-person in Johannesburg, Pretoria and soon in Nairobi',
     coursesFormatsLi2: 'Online, from anywhere',
     coursesFormatsLi3: 'Individual or group sessions',
     coursesFormatsLi4: 'Programs for children, adults, and corporate teams',

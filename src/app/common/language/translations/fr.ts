@@ -162,7 +162,7 @@ export const fr: Record<TranslationKeys, string> = {
     // Tab1 – Training Formats overview card
     coursesFormatsOverviewTitle: 'Formats de formation',
     coursesFormatsOverviewDesc: 'Nos cours sont flexibles et accessibles :',
-    coursesFormatsLi1: 'En présentiel à Johannesburg et Pretoria',
+    coursesFormatsLi1: 'En présentiel à Johannesburg, Pretoria et bientôt à Nairobi',
     coursesFormatsLi2: "En ligne, depuis n'importe où",
     coursesFormatsLi3: 'Individuels ou en groupe',
     coursesFormatsLi4: 'Pour particuliers, enfants, adultes ou entreprises',
