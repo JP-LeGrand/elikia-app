@@ -46,6 +46,12 @@ export class FeedbackStyleOneComponent {
             role: 'Parent of a Grade 10 student at Lycée Français Jules-Verne'
         },
         {
+            title: 'Academic Catch-Up and Reintegration',
+            text: 'Our daughter attended an International French School from GS, then missed part of the French curriculum after moving for two years. ELIKIA built a personalized catch-up plan and paired her with a supportive tutor. In a few months, she passed the assessment, rejoined her correct grade, and regained confidence.',
+            name: 'Dr Nomakhuze',
+            role: 'Parent of a grade 5 student at Lycée Français Jules Verne'
+        },
+        {
             title: 'Fun and Immersive Learning',
             text: 'Our daughter loves the French classes so much, and we are happy to get the lessons from her every week! We know the colors of the rainbow, how to count in French, and now the whole family is even asking questions in French...',
             name: 'Keabetswe',
