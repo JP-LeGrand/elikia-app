@@ -250,6 +250,7 @@ export const fr: Record<TranslationKeys, string> = {
     partnerButtonLabel: 'Nous contacter',
     partnersTrustTitle: 'Ils nous font confiance',
     testimonialsHeading: 'Témoignages',
+    feedbackReadMore: 'En savoir plus',
 
     // Contact page
     contactPageTitle: 'Contactez-nous',

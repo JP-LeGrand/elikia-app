@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { ThemeCustomizerService } from '../theme-customizer/theme-customizer.service';
+import { LanguageService } from '../language/language.service';
 
 interface TestimonialItem {
     title: string;
@@ -18,6 +19,8 @@ interface TestimonialItem {
     styleUrls: ['./feedback-style-one.component.scss']
 })
 export class FeedbackStyleOneComponent {
+
+    readonly lang = inject(LanguageService);
 
     constructor(
         public themeService: ThemeCustomizerService

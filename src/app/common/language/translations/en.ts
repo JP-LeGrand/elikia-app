@@ -250,6 +250,7 @@ export const en = {
     partnerButtonLabel: 'Contact Us',
     partnersTrustTitle: 'They Trust Us',
     testimonialsHeading: 'Testimonials',
+    feedbackReadMore: 'Read More',
 
     // Contact page
     contactPageTitle: 'Contact Us',

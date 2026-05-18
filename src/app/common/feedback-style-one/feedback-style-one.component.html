@@ -4,13 +4,16 @@
 >
     <owl-carousel-o [options]="feedbackSlides">
         <ng-template carouselSlide *ngFor="let testimonial of testimonials">
-            <a routerLink="/feedback" class="single-feedback-item d-block text-decoration-none">
+            <div class="single-feedback-item d-block">
                 <p>"{{ testimonial.text }}"</p>
                 <div class="info">
                     <h3>{{ testimonial.name }}</h3>
                     <span>{{ testimonial.role }}</span>
                 </div>
-            </a>
+                <div class="read-more-btn mtb-3">
+                    <a routerLink="/feedback" class="default-btn">{{ lang.t('feedbackReadMore') }} <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div>
         </ng-template>
     </owl-carousel-o>
 </div>
