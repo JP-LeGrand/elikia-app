@@ -1,125 +1,33 @@
 <div class="home-slides">
-    <owl-carousel-o [options]="homeSlides">
-        <ng-template carouselSlide>
-            <div
-                class="main-banner"
-                style="background-image: url(https://storage.googleapis.com/elikia_buclet/images/main-banner.jpg)"
-            >
-                <div class="d-table">
-                    <div class="d-table-cell">
-                        <div class="container">
-                            <div class="main-banner-content">
-                                <span class="sub-title">{{ lang.t('bannerSubTitle') }}</span>
-                                <h1>{{ lang.t('bannerTitle') }}</h1>
-                                <p>{{ lang.t('bannerDescription') }}</p>
-                                <div class="btn-box">
-                                    <a
-                                        routerLink="/about-us"
-                                        class="default-btn"
-                                        ><i
-                                            class="bx bx-move-horizontal icon-arrow before"
-                                        ></i
-                                        ><span class="label">{{ lang.t('bannerMoreInfo') }}</span
-                                        ><i
-                                            class="bx bx-move-horizontal icon-arrow after"
-                                        ></i
-                                    ></a>
-                                    <a
-                                        routerLink="/contact"
-                                        class="optional-btn"
-                                        >{{ lang.t('bannerContactUs') }}</a
-                                    >
-                                </div>
-                            </div>
+    <div class="main-banner">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="main-banner-content">
+                        <span class="sub-title">{{ lang.t('bannerSubTitle') }}</span>
+                        <h1>{{ lang.t('bannerTitle') }}</h1>
+                        <p>{{ lang.t('bannerDescription') }}</p>
+                        <div class="btn-box">
+                            <a
+                                routerLink="/about-us"
+                                class="default-btn"
+                                ><i
+                                    class="bx bx-move-horizontal icon-arrow before"
+                                ></i
+                                ><span class="label">{{ lang.t('bannerMoreInfo') }}</span
+                                ><i
+                                    class="bx bx-move-horizontal icon-arrow after"
+                                ></i
+                            ></a>
+                            <a
+                                routerLink="/contact"
+                                class="optional-btn"
+                                >{{ lang.t('bannerContactUs') }}</a
+                            >
                         </div>
                     </div>
                 </div>
             </div>
-        </ng-template>
-        <!-- <ng-template carouselSlide>
-            <div
-                class="main-banner"
-                style="background-image: url(images/main-banner4.jpg)"
-            >
-                <div class="d-table">
-                    <div class="d-table-cell">
-                        <div class="container">
-                            <div class="main-banner-content">
-                                <span class="sub-title">The Future</span>
-                                <h1>
-                                    Transformative Courses for those who learn
-                                    differently
-                                </h1>
-                                <p>
-                                    Elikia supports students by introducing
-                                    collaborators outside R, internships and
-                                    research experience abroad.
-                                </p>
-                                <div class="btn-box">
-                                    <a
-                                        routerLink="/courses-2-columns-style-2"
-                                        class="default-btn"
-                                        ><i
-                                            class="bx bx-move-horizontal icon-arrow before"
-                                        ></i
-                                        ><span class="label">View Courses</span
-                                        ><i
-                                            class="bx bx-move-horizontal icon-arrow after"
-                                        ></i
-                                    ></a>
-                                    <a
-                                        routerLink="/contact"
-                                        class="optional-btn"
-                                        >Contact Us</a
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </ng-template>
-        <ng-template carouselSlide>
-            <div
-                class="main-banner"
-                style="background-image: url(images/main-banner3.jpg)"
-            >
-                <div class="d-table">
-                    <div class="d-table-cell">
-                        <div class="container">
-                            <div class="main-banner-content text-center">
-                                <span class="sub-title"
-                                    >Aim for Excellence</span
-                                >
-                                <h1>Learn a new skill from online courses</h1>
-                                <p>
-                                    Elikia supports students by introducing
-                                    collaborators outside R, internships and
-                                    research experience abroad.
-                                </p>
-                                <div class="btn-box">
-                                    <a
-                                        routerLink="/courses-2-columns-style-3"
-                                        class="default-btn"
-                                        ><i
-                                            class="bx bx-move-horizontal icon-arrow before"
-                                        ></i
-                                        ><span class="label">View Courses</span
-                                        ><i
-                                            class="bx bx-move-horizontal icon-arrow after"
-                                        ></i
-                                    ></a>
-                                    <a
-                                        routerLink="/contact"
-                                        class="optional-btn"
-                                        >Get Started Free</a
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </ng-template> -->
-    </owl-carousel-o>
+        </div>
+    </div>
 </div>

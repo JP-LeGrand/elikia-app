@@ -2,6 +2,7 @@
     z-index: 1;
     height: 950px;
     position: relative;
+    background-image: url('https://storage.googleapis.com/elikia_buclet/images/main-banner.jpg');
     background: {
         color: var(--mainColor);
         position: center center;
@@ -139,6 +140,7 @@
 
     .main-banner {
         height: 100%;
+        background-image: url('https://storage.googleapis.com/elikia_buclet/images/main-banner-mobile.jpg');
         padding: {
             top: 250px;
             bottom: 125px;
