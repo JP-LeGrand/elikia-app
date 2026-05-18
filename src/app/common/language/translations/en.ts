@@ -44,7 +44,7 @@ export const en = {
     missionSlide1Li3: 'Over 150 adults and professionals successfully trained.',
     missionSlide1Li4: '100% success rate for our learners in exams and certifications.',
     missionSlide2Li1: 'Over 8 years of partnership with Lycée Français Jules Verne (Johannesburg and Pretoria): implementation and organization of FLE, French Passerelle, and Français + programs for students from kindergarten to middle school, including supervision of guided studies from CP to CM2.',
-    missionSlide2Li2: 'Collaboration with Crawford Bryanston and Crawford Sandton: management of extracurricular French programs.',
+    missionSlide2Li2: 'Collaboration with Crawford International Group: management of extracurricular French programs.',
     missionSlide2Li3: 'Support for children of employees in companies based in Johannesburg, including Huawei, Ericsson, ICBC Africa, Aon…',
     missionViewPrograms: 'View Programs',
     missionClosing: 'Thanks to these experiences, we provide every learner with a structured, high-quality learning experience, tailored to their needs, regardless of their age or goals.',

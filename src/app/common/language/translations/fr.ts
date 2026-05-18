@@ -46,7 +46,7 @@ export const fr: Record<TranslationKeys, string> = {
     missionSlide1Li3: 'Plus de 150 adultes et professionnels formés avec succès.',
     missionSlide1Li4: 'Taux de réussite de 100 % de nos apprenants aux examens et certifications.',
     missionSlide2Li1: "Partenariat de plus de 8 ans avec le Lycée Français Jules Verne (Johannesburg et Pretoria) : mise en place et organisation des dispositifs FLE, French Passerelle et Français +, pour les élèves de la maternelle au collège, ainsi que suivi des études dirigées du CP au CM2.",
-    missionSlide2Li2: 'Collaboration avec Crawford Bryanston et Crawford Sandton : gestion de programmes périscolaires de français.',
+    missionSlide2Li2: 'Collaboration avec le groupe Crawford International: gestion de programmes périscolaires en français.',
     missionSlide2Li3: "Accompagnement des enfants des salariés d'entreprises implantées à Johannesburg, notamment Huawei, Ericsson, ICBC Africa, Aon…",
     missionViewPrograms: 'Voir les programmes',
     missionClosing: 'Grâce à ces expériences, nous offrons à chaque apprenant un enseignement structuré et de qualité, adapté à ses besoins, quel que soit son âge ou son objectif.',
