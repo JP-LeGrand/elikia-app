@@ -90,7 +90,7 @@ export const en = {
     valuesProfessionalismText: 'Structured and reliable service with measurable results for both individuals and businesses.',
 
     // Instructors section
-    instructorsCard1Title: 'Dr Debora Lolonga',
+    instructorsCard1Title: 'Dr Débora Lolonga',
     instructorsCard1Role: 'Founder and Academic Director',
     instructorsCard1Text: 'Oversees the design and continuous update of programs to ensure quality, consistency, and effectiveness across all courses.',
     instructorsCard2Title: 'Certified and Accredited Teachers',
