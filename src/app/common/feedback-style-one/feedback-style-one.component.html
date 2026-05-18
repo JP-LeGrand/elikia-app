@@ -3,15 +3,15 @@
     [class.dark-feedback-slides]="themeService.isDark()"
 >
     <owl-carousel-o [options]="feedbackSlides">
-        <ng-template carouselSlide *ngFor="let testimonial of testimonials">
+        <ng-template carouselSlide *ngFor="let testimonial of testimonials; let i = index">
             <div class="single-feedback-item d-block">
                 <p>"{{ testimonial.text }}"</p>
                 <div class="info">
                     <h3>{{ testimonial.name }}</h3>
                     <span>{{ testimonial.role }}</span>
                 </div>
-                <div class="read-more-btn mtb-3">
-                    <a routerLink="/feedback" class="default-btn">{{ lang.t('feedbackReadMore') }} <i class='bx bx-right-arrow-alt'></i></a>
+                <div class="read-more-btn mt-3 mb-3">
+                    <a [routerLink]="['/feedback']" [queryParams]="{ index: i }" class="default-btn">{{ lang.t('feedbackReadMore') }} <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
             </div>
         </ng-template>

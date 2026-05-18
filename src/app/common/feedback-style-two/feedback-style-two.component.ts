@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { ThemeCustomizerService } from '../theme-customizer/theme-customizer.service';
 import { LanguageService } from '../language/language.service';
@@ -17,13 +18,27 @@ interface TestimonialItem {
     templateUrl: './feedback-style-two.component.html',
     styleUrls: ['./feedback-style-two.component.scss']
 })
-export class FeedbackStyleTwoComponent {
+export class FeedbackStyleTwoComponent implements OnInit {
 
     readonly lang = inject(LanguageService);
+    private readonly route = inject(ActivatedRoute);
 
     constructor(
         public themeService: ThemeCustomizerService
     ) {}
+
+    ngOnInit(): void {
+        this.route.queryParams.subscribe(params => {
+            const index = parseInt(params['index'], 10);
+            if (!isNaN(index)) {
+                this.testimonialsSlides = {
+                    ...this.testimonialsSlides,
+                    startPosition: index,
+                    autoplay: false   // keep selected item centered; user can browse manually
+                };
+            }
+        });
+    }
 
 	readonly authenticityNotice = {
 		en: 'All testimonials presented on this page are authentic and provided by families and learners who have followed our programs.',
