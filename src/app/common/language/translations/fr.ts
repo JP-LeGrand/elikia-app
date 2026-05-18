@@ -183,7 +183,7 @@ export const fr: Record<TranslationKeys, string> = {
     // Tab3 – Companies course card titles
     coursesCompaniesCard1Title: "Formations sur mesure en français pour entreprises et professionnels travaillant avec l’Afrique francophone",
     coursesCompaniesCard2Title: 'Cours adaptés aux besoins spécifiques des équipes ou secteurs',
-    coursesCompaniesCard3Title: 'Sessions en entreprise, en présentiel ou en ligne',
+    coursesCompaniesCard3Title: 'Sessions en entreprise ou en ligne',
 
     // Tab4 – Children course card titles
     coursesChildrenCard1Title: 'Cours de français structurés et préparation aux certifications ou examens (DELF, IB, GCSE, etc.)',
