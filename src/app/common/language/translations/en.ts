@@ -183,7 +183,7 @@ export const en = {
     // Tab3 – Companies course card titles
     coursesCompaniesCard1Title: 'Tailored French language training for businesses and professionals dealing with Francophone Africa',
     coursesCompaniesCard2Title: 'Courses designed to meet specific team or sector needs',
-    coursesCompaniesCard3Title: 'On-site training in Johannesburg and Pretoria or online',
+    coursesCompaniesCard3Title: 'On-site or online training',
 
     // Tab4 – Children course card titles
     coursesChildrenCard1Title: 'Structured French lessons and preparation for exams/certifications (DELF, IB, GCSE, etc.)',
