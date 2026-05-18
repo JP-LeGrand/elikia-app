@@ -252,6 +252,17 @@ export const fr: Record<TranslationKeys, string> = {
     testimonialsHeading: 'Témoignages',
     feedbackReadMore: 'En savoir plus',
 
+    // SEO
+    seoTitle: 'Elikia French4All | Apprendre le français en ligne',
+    seoDescription: 'Elikia French4All vous aide a apprendre le francais en ligne avec des professeurs experts, des lecons interactives et un accompagnement personnalise pour enfants, adultes et professionnels.',
+    seoKeywords: 'apprendre le francais en ligne, cours de francais en ligne, lecons de francais, soutien en francais, professeur de francais, grammaire francaise, vocabulaire francais, preparation DELF, preparation DALF, francais pour enfants, francais pour adultes, francais des affaires, Elikia French4All',
+    seoAuthor: 'Equipe Elikia French4All',
+    seoOgTitle: 'Elikia French4All - Apprendre le francais en ligne',
+    seoOgDescription: 'Rejoignez Elikia French4All pour gagner en confiance en francais avec des programmes flexibles pour enfants, adultes et professionnels.',
+    seoTwitterTitle: 'Elikia French4All - Apprendre le francais en ligne',
+    seoTwitterDescription: 'Apprenez le francais avec des enseignants experts et des lecons interactives chez Elikia French4All.',
+    seoSubject: 'Plateforme d\'apprentissage du francais en ligne',
+
     // Contact page
     contactPageTitle: 'Contactez-nous',
     contactBreadcrumbHome: 'Accueil',

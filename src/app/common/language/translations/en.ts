@@ -252,6 +252,17 @@ export const en = {
     testimonialsHeading: 'Testimonials',
     feedbackReadMore: 'Read More',
 
+    // SEO
+    seoTitle: 'Elikia French4All | Learn French Online',
+    seoDescription: 'Elikia French4All helps you learn French online with expert teachers, interactive lessons, and personalized support for children, adults, and professionals.',
+    seoKeywords: 'learn French online, online French courses, French lessons, French tutoring, French teacher, French grammar, French vocabulary, DELF preparation, DALF preparation, French for kids, French for adults, business French, Elikia French4All',
+    seoAuthor: 'Elikia French4All Team',
+    seoOgTitle: 'Elikia French4All - Learn French Online',
+    seoOgDescription: 'Join Elikia French4All to build confidence in French with flexible online programs for children, adults, and professionals.',
+    seoTwitterTitle: 'Elikia French4All - Learn French Online',
+    seoTwitterDescription: 'Learn French with expert teachers and interactive lessons at Elikia French4All.',
+    seoSubject: 'Online French Language Learning Platform',
+
     // Contact page
     contactPageTitle: 'Contact Us',
     contactBreadcrumbHome: 'Home',
