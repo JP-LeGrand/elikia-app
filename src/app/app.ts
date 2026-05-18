@@ -35,17 +35,83 @@ export class App {
                 this.previousUrl = currentUrl;
 
                 // Set dynamic meta tags and title (customize per route as needed)
-                this.titleService.setTitle('Elikia French4All | Apprenez le français en ligne');
+                this.titleService.setTitle('Elikia French4All | Learn French Online | Apprenez le Français');
+
+                // Meta Description
                 this.meta.updateTag({
                     name: 'description',
-                    content: `Elikia French4All offers comprehensive online French courses for all levels. Learn French with expert teachers, interactive lessons, and a supportive community. Start your French learning journey today!
-
-                    Elikia French4All propose des cours de français en ligne pour tous les niveaux. Apprenez le français avec des professeurs expérimentés, des leçons interactives et une communauté solidaire. Commencez votre apprentissage du français dès aujourd'hui !`
+                    content: 'Elikia French4All - Master French online with expert teachers, interactive lessons, and live practice. Beginners to advanced. Affordable courses, lifetime access, and community support. Start learning French today! | Elikia French4All - Maîtrisez le français en ligne avec des professeurs experts, des leçons interactives et la pratique en direct. Du débutant à avancé. Cours abordables, accès à vie et soutien communautaire. Commencez à apprendre le français dès maintenant!'
                 });
+
+                // Comprehensive Keywords in English and French
                 this.meta.updateTag({
                     name: 'keywords',
-                    content: `French learning, online French courses, language school, French for all, Elikia, French classes, French lessons, French teacher, learn French online, French education, French language, French grammar, French vocabulary, French speaking, French culture, French beginners, advanced French, French tutoring, French practice, French conversation, French exam preparation,
-                    Apprendre le français, cours de français en ligne, école de langues, français pour tous, Elikia, cours de français, leçons de français, professeur de français, apprendre le français en ligne, éducation française, langue française, grammaire française, vocabulaire français, parler français, culture française, débutants français, français avancé, tutorat français, pratique du français, conversation française, préparation aux examens de français`
+                    content: 'learn French online, French language courses, online French lessons, French for beginners, advanced French, French grammar, French vocabulary, French conversation, French pronunciation, French culture, French teacher, language learning, interactive French lessons, French language school, French exam prep, DELF DALF preparation, French speaking practice, French writing, French listening, French reading, language education, affordable French courses, flexible learning, language skills, bilingual learning, French immersion, language mastery, speak French fluently, French communication, language proficiency, Elikia, French4All, cours de français en ligne, apprendre le français, leçons de français, français pour débutants, français avancé, grammaire française, vocabulaire français, conversation française, prononciation française, culture française, professeur de français, école de langues, leçons françaises interactives, préparation aux examens DELF DALF, pratique de la parole française, rédaction française, écoute française, lecture française, enseignement des langues, cours de français abordables, apprentissage flexible, compétences linguistiques, apprentissage bilingue, immersion française, maîtrise des langues, parler français couramment, communication française, compétence linguistique'
+                });
+
+                // Author
+                this.meta.updateTag({
+                    name: 'author',
+                    content: 'Elikia French4All Team'
+                });
+
+                // Open Graph Tags for Social Media
+                this.meta.updateTag({
+                    property: 'og:title',
+                    content: 'Elikia French4All - Master French Online | Maîtrisez le Français'
+                });
+
+                this.meta.updateTag({
+                    property: 'og:description',
+                    content: 'Transform your French learning journey with Elikia French4All. Expert teachers, interactive lessons, and affordable courses for all levels. | Transformez votre parcours d\'apprentissage du français avec Elikia French4All. Professeurs experts, leçons interactives et cours abordables pour tous les niveaux.'
+                });
+
+                this.meta.updateTag({
+                    property: 'og:type',
+                    content: 'website'
+                });
+
+                this.meta.updateTag({
+                    property: 'og:site_name',
+                    content: 'Elikia French4All'
+                });
+
+                // Twitter Card Tags
+                this.meta.updateTag({
+                    name: 'twitter:card',
+                    content: 'summary_large_image'
+                });
+
+                this.meta.updateTag({
+                    name: 'twitter:title',
+                    content: 'Elikia French4All - Learn French Online'
+                });
+
+                this.meta.updateTag({
+                    name: 'twitter:description',
+                    content: 'Learn French with expert teachers and interactive lessons. Start your journey with Elikia French4All today!'
+                });
+
+                // Language Meta Tag
+                this.meta.updateTag({
+                    httpEquiv: 'Content-Language',
+                    content: 'en-US, fr-FR'
+                });
+
+                // Additional SEO Tags
+                this.meta.updateTag({
+                    name: 'robots',
+                    content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'
+                });
+
+                this.meta.updateTag({
+                    name: 'googlebot',
+                    content: 'index, follow'
+                });
+
+                this.meta.updateTag({
+                    name: 'subject',
+                    content: 'Online French Language Learning Platform'
                 });
             }
         });
