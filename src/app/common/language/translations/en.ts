@@ -52,7 +52,7 @@ export const en = {
     // About page (page-one)
     aboutPageSubTitle: 'About Us',
     aboutPageHeading: 'ELIKIA French4All',
-    aboutPageLead: 'A leading French language center in Johannesburg, Pretoria, and online.',
+    aboutPageLead: 'Your reference center for French learning and academic success in the French school system.',
     aboutPageDescription: "For over 10 years, we have been helping children, adults, and professionals develop their French skills. Our approach combines personalized guidance, experienced instructors, and programs tailored to each learner's goals, ensuring effective and enjoyable learning.",
     aboutPageMissionChildrenTitle: 'For Children and Teenagers',
     aboutPageMissionChildrenLi1: 'Fun, engaging activities to introduce French.',

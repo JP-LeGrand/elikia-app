@@ -54,7 +54,7 @@ export const fr: Record<TranslationKeys, string> = {
     // About page (page-one)
     aboutPageSubTitle: 'Qui sommes-nous ?',
     aboutPageHeading: 'ELIKIA French4All',
-    aboutPageLead: "Votre centre de référence pour l'apprentissage du français à Johannesburg, Pretoria ou en ligne.",
+    aboutPageLead: "Votre centre de référence pour l'apprentissage du français et la réussite dans le système scolaire français.",
     aboutPageDescription: "Depuis plus de 10 ans, nous sommes au service des enfants, des adultes et des professionnels qui souhaitent développer leurs compétences en français. Notre approche pédagogique repose sur un accompagnement personnalisé, des enseignants expérimentés et des programmes adaptés aux objectifs de chaque apprenant.",
     aboutPageMissionChildrenTitle: 'Auprès des enfants et adolescents',
     aboutPageMissionChildrenLi1: "Offrir des activités ludiques d'initiation au français.",
