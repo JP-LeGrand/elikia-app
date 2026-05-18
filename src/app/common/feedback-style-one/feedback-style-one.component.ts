@@ -64,7 +64,7 @@ export class FeedbackStyleOneComponent {
         animateOut: 'fadeOut',
         autoplayHoverPause: true,
         mouseDrag: false,
-        smartSpeed: 500,
+        smartSpeed: 1000,
         autoplay: true,
         items: 1,
         navText: [

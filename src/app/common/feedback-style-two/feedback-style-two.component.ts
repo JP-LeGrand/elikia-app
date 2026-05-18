@@ -78,7 +78,7 @@ export class FeedbackStyleTwoComponent {
 		nav: false,
 		dots: true,
 		autoplayHoverPause: true,
-		smartSpeed: 500,
+		smartSpeed: 1000,
 		autoplay: true,
 		center: true,
 		navText: [
